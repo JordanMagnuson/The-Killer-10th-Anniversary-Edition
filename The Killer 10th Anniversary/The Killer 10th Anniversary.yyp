@@ -118,6 +118,7 @@
     {"id":{"name":"sprGroundForest","path":"sprites/sprGroundForest/sprGroundForest.yy",},"order":3,},
     {"id":{"name":"sprCactus02","path":"sprites/sprCactus02/sprCactus02.yy",},"order":5,},
     {"id":{"name":"sprBush01","path":"sprites/sprBush01/sprBush01.yy",},"order":0,},
+    {"id":{"name":"oGlobals","path":"objects/oGlobals/oGlobals.yy",},"order":0,},
     {"id":{"name":"sprCloud01","path":"sprites/sprCloud01/sprCloud01.yy",},"order":8,},
     {"id":{"name":"sprGrass01","path":"sprites/sprGrass01/sprGrass01.yy",},"order":7,},
     {"id":{"name":"sprCloud08","path":"sprites/sprCloud08/sprCloud08.yy",},"order":15,},

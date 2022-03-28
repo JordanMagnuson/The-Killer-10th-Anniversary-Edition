@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndWolf",
-  "duration": 0.0,
+  "soundFile": "sndWolf.wav",
+  "duration": 23.1967354,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
