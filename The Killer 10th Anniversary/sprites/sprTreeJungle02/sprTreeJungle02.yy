@@ -4,7 +4,7 @@
     "path": "texturegroups/Default",
   },
   "sequence": {
-    "spriteId": {"name":"sprTree01","path":"sprites/sprTree01/sprTree01.yy",},
+    "spriteId": {"name":"sprTreeJungle02","path":"sprites/sprTreeJungle02/sprTreeJungle02.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -16,7 +16,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c1720e29-63ee-47e2-bc85-3baa2f953e18","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c6263669-b4de-4c74-9c07-cfe2d2244450","path":"sprites/sprTree01/sprTree01.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"96c40ac0-74d8-4e98-abc7-caa87bff264c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0fe1ae72-d16e-43b5-ac30-1d6a5df92631","path":"sprites/sprTreeJungle02/sprTreeJungle02.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -33,9 +33,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprTree01","path":"sprites/sprTree01/sprTree01.yy",},
+    "parent": {"name":"sprTreeJungle02","path":"sprites/sprTreeJungle02/sprTreeJungle02.yy",},
     "resourceVersion": "1.3",
-    "name": "sprTree01",
+    "name": "sprTreeJungle02",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -48,24 +48,24 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 116,
+  "bbox_right": 92,
   "bbox_top": 0,
-  "bbox_bottom": 75,
+  "bbox_bottom": 57,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 117,
-  "height": 76,
+  "width": 93,
+  "height": 58,
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c6263669-b4de-4c74-9c07-cfe2d2244450","path":"sprites/sprTree01/sprTree01.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c6263669-b4de-4c74-9c07-cfe2d2244450","path":"sprites/sprTree01/sprTree01.yy",},"LayerId":{"name":"c7c53d8c-7e1b-4756-a325-d25117f0e22b","path":"sprites/sprTree01/sprTree01.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprTree01","path":"sprites/sprTree01/sprTree01.yy",},"resourceVersion":"1.0","name":"c6263669-b4de-4c74-9c07-cfe2d2244450","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0fe1ae72-d16e-43b5-ac30-1d6a5df92631","path":"sprites/sprTreeJungle02/sprTreeJungle02.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0fe1ae72-d16e-43b5-ac30-1d6a5df92631","path":"sprites/sprTreeJungle02/sprTreeJungle02.yy",},"LayerId":{"name":"baf34e01-a9d9-4cbf-bdf7-6be32157bae9","path":"sprites/sprTreeJungle02/sprTreeJungle02.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprTreeJungle02","path":"sprites/sprTreeJungle02/sprTreeJungle02.yy",},"resourceVersion":"1.0","name":"0fe1ae72-d16e-43b5-ac30-1d6a5df92631","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c7c53d8c-7e1b-4756-a325-d25117f0e22b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"baf34e01-a9d9-4cbf-bdf7-6be32157bae9","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/jungle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprTree01",
+  "name": "sprTreeJungle02",
   "tags": [],
   "resourceType": "GMSprite",
 }
