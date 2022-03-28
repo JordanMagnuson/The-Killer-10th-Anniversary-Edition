@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "beach",
+    "path": "folders/Sprites/beach.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprDune04",
