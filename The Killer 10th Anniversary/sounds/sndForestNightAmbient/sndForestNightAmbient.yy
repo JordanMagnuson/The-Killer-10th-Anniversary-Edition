@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndForestNightAmbient",
-  "duration": 0.0,
+  "soundFile": "sndForestNightAmbient.wav",
+  "duration": 20.3232651,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

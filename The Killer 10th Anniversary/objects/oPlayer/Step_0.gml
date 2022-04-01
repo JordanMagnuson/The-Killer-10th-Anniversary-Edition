@@ -22,17 +22,18 @@ if(X){
 		global.startedWalking = true;
 		walking = false;
 	}
-	if(sprite_index = sprKillerStandingPush && image_index == 3){
+	if(sprite_index == sprKillerStandingPush && image_index == 3){
 		sprite_index = sprKillerWalk;
 		walking = true;
 	}
-	if(sprite_index = sprKillerStand){
+	
+	if(sprite_index == sprKillerStand){
 		sprite_index = sprKillerWalk;
 		walking = true;
 	}
 	else if(sprite_index == sprKillerWalk){
 		//if(global.victim.x -x <= PUSH_DISTANCE) //ADD AFTER VICTIM IS IMPLEMENTED
-			push();
+			//push();
 		
 		//Reset canPush on the 3rd frame of the walking animation
 		if(image_index == 3){

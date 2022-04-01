@@ -20,26 +20,26 @@ room_height = 200
 room_width = 300;
 room_speed = 30;
 
-//currentLocation = instance_create_depth(0, 0, 0, oJungle);
+currentLocation = instance_create_depth(0, 0, 0, oPlains); //SET TO OJUNGLE AFTER OJUNGLE HAS BEEN CREATED
+locationName = "plains"; //set to "jungle" later; this is used for the ground
 alarm[0] = CHANGE_LOCATION_TIME;
 
 // Sound Controller
-//instance_create_depth(0,0,0, oSoundController);
+instance_create_depth(0,0,0, oSoundController);
 
 // Ground and Sky
-//ground = instance_create_depth(0,175,12, oGround);
-//oGround.x = -sprite_get_width(sprGroundBeach)/2;
+ground = instance_create_depth(0,175,12, oGround);
+oGround.x = -sprite_get_width(sprGroundBeach)/2;
 
-//need to find the correct layer or depth for osky
-//instance_create_depth(0, 0, 0, oSky);
-//oSky.Sky();
+instance_create_depth(0, 0, 0, oSky);
+oSky.Sky();
 	
 //Mountain controller
-//instance_create_depth(0,0,0, oMountainController);
+instance_create_depth(0,0,0, oMountainController);
 
 //Night-Day cycle
-//instance_create_depth(0,0,0, oNight);
-//oNight.night(self, false);
+instance_create_depth(0,0,0, oNight);
+oNight.Night();
 time = "night";
 
 // Time Counter
@@ -52,10 +52,23 @@ global.player = instance_create_depth(0, 0, -1, oPlayer);
 //Starting Text
 alarm[1] = 3 * room_speed;
 
+//---------------------------------------------------------------
+// Use audio listener to handle pan and fade for positional sounds.
+// This is different from original AS3 source code.
+// See tutorial at https://www.youtube.com/watch?v=ZpPBlD9FyKw
+audio_listener_orientation(0,1,0,0,0,1);			// Fix left-right orientation.
+audio_listener_position(global.player.x, global.player.y-10,0);	// Position listener at player location. (There seems to be a bug in HTML5 compiler, where y position of listener needs to be slightly different from emitter(s), or else sound jumps from left to right speaker.)
+//---------------------------------------------------------------
 
-//oLocation.creationTime = 0.6;
-//oLocation.gameStart();
-//oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
+//---------------------------------------------------------------
+// Use camera object to handle window resizing, fullscreen, etc.
+// This is different from original AS3 source code.
+instance_create_depth(0,0, -1, oCamera);
+//---------------------------------------------------------------
+
+oLocation.creationTime = 0.6;
+oLocation.gameStart();
+oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
 
 if(global.shouldExplode){
 	global.explosionTime = global.EARLIEST_EXPLOSION + random(1) * (global.LATEST_EXPLOSION - global.EARLIEST_EXPLOSION);
@@ -98,7 +111,7 @@ function startFallingCamera(){
 function fadeMusicIn(duration = 10){
 	show_debug_message("Music fading in");
 	musicStarted = true;
-	//oSoundController.fadeout(duration);
+	//oSoundController.fadeout(duration); IMPLEMENT AFTER FADEOUT FUNCTION HAS BEEN ADDED
 	global.playSounds = false;
 	global.fadeSounds = true;
 	//music.loop(0); AGAIN, NOT SURE HOW TO CONVERT THIS
@@ -124,7 +137,7 @@ function fadeAllItemsAfterExplosion(){
 	*/
 }
 
-function fadeAllItemsGeneric(duration = 10){
+function fadeAllItemsGeneric(duration = 10){//THIS MAY NOT WORK
 /*	oItem NOT YET CREATED
 	for (var i = 0; i < instance_number(oItem); ++i;){
 		if(instance_find(oItem, i).type != cloud){
@@ -134,7 +147,7 @@ function fadeAllItemsGeneric(duration = 10){
 	*/
 }
 
-function fadeItem(){
+function fadeItem(){ //THIS MAY NOT WORK
 	show_debug_message("Fade item");
 	itemList = ds_list_create()
 	/*	oItem NOT YET CREATED
@@ -165,16 +178,16 @@ function changeLocation(location = ""){
 	
 	switch(global.locationChanges){
 		case 0:
-			//newLocation = instance_create_depth(0,0,0,oForest); UNCOMMENT WHEN OFOREST IS CREATED
+			newLocation = instance_create_depth(0,0,0,oForest); 
 			break;
 		case 1:
-			//newLocation = instance_create_depth(0,0,0,oBeach);	UNCOMMENT WHEN OBEACH IS CREATED
+			newLocation = instance_create_depth(0,0,0,oBeach);	
 			break;
 		case 2:
 			global.touchedPlains = true;
 			alarm[2] = 15 * room_speed;
 			show_debug_message("Reached plains alarm set");
-			//newLocation = instance_create_depth(0,0,0, oPlains);	UNCOMMENT WHEN OPLAINS IS CREATED
+			newLocation = instance_create_depth(0,0,0, oPlains);
 			break;
 	}
 	
@@ -186,32 +199,28 @@ function changeLocation(location = ""){
 	if(oSoundController)
 		oSoundController.changeLocation(newLocation);
 	instance_destroy(self.location);
-	/* //UNCOMMENT AS LOCATIONS ARE CREATED
-	if(newLocation == "jungle")
-		instance_create_depth(0,0,0, oJungle);
-	else if (newLocation == "forest")
+
+	/*If(newLocation == "jungle")
+		instance_create_depth(0,0,0, oJungle);	UNCOMMENT WHEN OJUNGLE IS CREATED
+	else*/ if (newLocation == "forest")
 		instance_create_depth(0,0,0, oForest);
 	else if (newLocation == "plains")
 		instance_create_depth(0,0,0, oPlains);
 	else if (newLocation == "forest")
-		instance_create_depth(0,0,0, oBeach);
-		*/	
-		//oLocation.Location();    UNCOMMENT WHEN OLOCATION IS CREATED
-		//oLocation.creationTime = 2;
-		//oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds
-		
-		
-		//destroys old ground when change location is spammed
-		/* UNCOMMENT WHEN OGROUND IS CREATED
-		if(variable_instance_exists(oMyWorldController, "oldGround")){ 
-			if(instance_exists(oldGround)){
-				instance_destroy(oldGround);
-			}
+		instance_create_depth(0,0,0, oBeach);	
+	oLocation.Location();    
+	oLocation.creationTime = 2;
+	oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds
+
+	//destroys old ground when change location is spammed
+	if(variable_instance_exists(oMyWorldController, "oldGround")){ 
+		if(instance_exists(oldGround)){
+			instance_destroy(oldGround);
 		}
-		oldGround = ground;
-		ground = instance_create_depth(room_width, oGround.y, 12, oGround);	
-		*/
-		global.locationChanges++;
+	}
+	oldGround = ground;
+	ground = instance_create_depth(room_width, oGround.y, 12, oGround);	
+	global.locationChanges++;
 }
 
 function reachedPlains(){
@@ -233,7 +242,7 @@ function changeLocationChance(){
 	else if(global.locationChanges == 2 && oTimeCounter.timePassedSinceLastLocationChange < global.timeInBeach){
 		return;	
 	}
-	/*	UNCOMMENT WHEN OLOCATION IS COMPLETE
+
 	switch(location.creationTimeSlope){
 		case 1:
 			if (location.creationTime < (location.minCreationTime * 2)){
@@ -255,11 +264,9 @@ function changeLocationChance(){
 			}
 			break;
 	}
-	*/
 }
 
 function advanceTime(){
-	/* UNCOMMENT WHEN NIGHT, DAY, AND SUNSET ARE CREATED
 	switch (time){
 		case "day":
 			instance_create_depth(0, 0, 999, oSunset)
@@ -276,7 +283,7 @@ function advanceTime(){
 			oDay.Day(self);
 			//oNight.complete();
 			break;
-	}*/
+	}
 }
 
 function showTextPress(){

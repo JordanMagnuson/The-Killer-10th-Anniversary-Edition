@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndStream.wav",
-  "duration": 3.552653,
+  "soundFile": "sndStream.mp3",
+  "duration": 20.688,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
