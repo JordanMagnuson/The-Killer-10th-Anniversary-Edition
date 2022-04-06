@@ -47,7 +47,7 @@ global.timeCounter = instance_create_depth(0,0,0, oTimeCounter);
 
 //Player
 global.player = instance_create_depth(0, 0, -1, oPlayer);
-//global.victim = instance_create_depth(0,0, -1, oVictim);
+global.victim = instance_create_depth(0,0, -1, oVictim);
 
 //Starting Text
 alarm[1] = 3 * room_speed;

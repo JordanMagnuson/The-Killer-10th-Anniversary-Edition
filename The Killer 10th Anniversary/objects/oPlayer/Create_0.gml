@@ -32,7 +32,9 @@ function standingPush(){
 	//hit box must be set for each sprite
 	sprite_set_offset(sprite_index, 0,sprite_height);
 	sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, sprite_height, bboxkind_rectangular,0);
-	//RESET VICTIM STUMBLE TIME HERE
+	
+	//Reset Victim's Stumble Time
+	global.victim.alarm[2] = global.victim.STUMBLE_TIME * room_speed;
 }
 
 function push(){
@@ -44,5 +46,7 @@ function push(){
 	//hit box must be set for each sprite
 	sprite_set_offset(sprite_index, 0,sprite_height);
 	sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, sprite_height, bboxkind_rectangular,0);
-	//RESET VICTIM STUMBLE TIME HERE
+	
+	//Reset Victim's Stumble Time
+	global.victim.alarm[2] = global.victim.STUMBLE_TIME * room_speed;
 }

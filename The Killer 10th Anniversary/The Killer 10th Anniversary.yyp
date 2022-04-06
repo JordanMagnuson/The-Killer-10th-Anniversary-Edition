@@ -109,6 +109,7 @@
     {"id":{"name":"sndCreaking","path":"sounds/sndCreaking/sndCreaking.yy",},"order":2,},
     {"id":{"name":"sprCloud03","path":"sprites/sprCloud03/sprCloud03.yy",},"order":9,},
     {"id":{"name":"sndJungleNight","path":"sounds/sndJungleNight/sndJungleNight.yy",},"order":12,},
+    {"id":{"name":"oVictim","path":"objects/oVictim/oVictim.yy",},"order":31,},
     {"id":{"name":"sprGravestoneSnow","path":"sprites/sprGravestoneSnow/sprGravestoneSnow.yy",},"order":4,},
     {"id":{"name":"sprBarrenTree02","path":"sprites/sprBarrenTree02/sprBarrenTree02.yy",},"order":1,},
     {"id":{"name":"sprGroundSnow","path":"sprites/sprGroundSnow/sprGroundSnow.yy",},"order":4,},

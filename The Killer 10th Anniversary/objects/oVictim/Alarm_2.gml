@@ -1,0 +1,2 @@
+/// @description Stumble Alarm
+stumble();
