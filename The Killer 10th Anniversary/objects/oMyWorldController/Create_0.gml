@@ -20,8 +20,8 @@ room_height = 200
 room_width = 300;
 room_speed = 30;
 
-currentLocation = instance_create_depth(0, 0, 0, oPlains); //SET TO OJUNGLE AFTER OJUNGLE HAS BEEN CREATED
-locationName = "plains"; //set to "jungle" later; this is used for the ground
+currentLocation = instance_create_depth(0, 0, 0, oJungle);
+locationName = "jungle"; 
 alarm[0] = CHANGE_LOCATION_TIME;
 
 // Sound Controller
@@ -90,7 +90,7 @@ function explode(){
 		alarm[3] = 1 * room_speed;
 		return;
 	}
-	//FP.rate = 0.4 RATE IS RELATED TO TIME BUT I DON'T KNOW HOW
+	global.rate = 0.4 
 	global.exploded = true;
 	//instance_create_depth(0,0,0, oExplosion);
 	//instance_create_depth(0,0,0, oExplodedPlayer);
