@@ -20,8 +20,8 @@ room_height = 200
 room_width = 300;
 room_speed = 30;
 
-currentLocation = instance_create_depth(0, 0, 0, oJungle);
-locationName = "jungle"; 
+currentLocation = instance_create_depth(0, 0, 0, oForest);
+locationName = currentLocation.locationType; 
 alarm[0] = CHANGE_LOCATION_TIME;
 
 // Sound Controller

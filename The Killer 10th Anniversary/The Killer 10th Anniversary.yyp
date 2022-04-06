@@ -223,6 +223,7 @@
     {"id":{"name":"sndMusicJonsiTornado","path":"sounds/sndMusicJonsiTornado/sndMusicJonsiTornado.yy",},"order":21,},
     {"id":{"name":"sprCloud05","path":"sprites/sprCloud05/sprCloud05.yy",},"order":11,},
     {"id":{"name":"sprKillerPush","path":"sprites/sprKillerPush/sprKillerPush.yy",},"order":1,},
+    {"id":{"name":"oForestPalm","path":"objects/oForestPalm/oForestPalm.yy",},"order":5,},
     {"id":{"name":"sprCloud02","path":"sprites/sprCloud02/sprCloud02.yy",},"order":8,},
     {"id":{"name":"sprFlowerTree","path":"sprites/sprFlowerTree/sprFlowerTree.yy",},"order":1,},
   ],
