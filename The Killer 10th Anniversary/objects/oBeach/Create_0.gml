@@ -24,13 +24,13 @@ function createItemHere(){
 	
 	creationNumber = random_range(0,1);
 	if (random_range(0,1) > 0.25){		
-		if (creationNumber < 0.005 && global.oCastleSeen == false){ 
+	/*	if (creationNumber < 0.005 && global.oCastleSeen == false){ 
 			instance_create_depth(room_width+10, 175, 0, oCastle);
 			global.oCastleSeen = true;
 		}
-		
-		else if (creationNumber < 0.05){
-			instance_create_depth(room_width+10, 175, 0, oCactus);
+		*/
+		if (creationNumber < 0.05){
+			instance_create_depth(room_width+10, 175, 0, oBeachPalm);
 		}
 	
 		else if (creationNumber < 0.4){
@@ -45,17 +45,17 @@ function createItemHere(){
 
 	//sounds
 	if (random_range(0,1) > 0.4){
-		pan = choose( -1, 1) * random_range(0,1);
-		vol = 0.3 + 0.7 * random_range(0,1);
+		pan = choose( -1, 1) * random(1);
+		vol = 0.3 + 0.7 * random(1);
 		// Night sounds
 		if (oMyWorldController.time == "night"){
-			if (creationNumber < 0.05 && !audio_is_playing(sndGullsRandom)){
+			/*if (creationNumber < 0.05 && !audio_is_playing(sndGullsRandom)){
 				sndGullsRandom = choose(sndGulls01, sndGulls02, sndGulls03);
 				audio_emitter_gain(sEmit0, vol);
 				audio_emitter_position(sEmit0, pan,0,0);
 				audio_play_sound_on(sEmit0, sndGullsRandom, false, 20);
 			}					
-			else if (creationNumber < 0.15 && !audio_is_playing(sndWind)){
+			else*/if (creationNumber < 0.15 && !audio_is_playing(sndWind)){
 				audio_emitter_gain(sEmit1, vol);
 				audio_emitter_position(sEmit1, pan,0,0);
 				audio_play_sound_on(sEmit1, sndWind, false, 20);

@@ -14,19 +14,22 @@ waveDirection= 1; //direction changed to wave direction, direction means somethi
 
 sprite_index = sprWaves01;
 image_alpha = 0;
+type = oWaves;
 
 //Hit box to bottom left
 sprite_set_offset(sprite_index, 0, sprite_height);
 sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, sprite_height, bboxkind_rectangular,0);
 
-//x = X_INIT;
-//y = room_height;
+x = X_INIT;
+y = room_height;
+
+instance_create_depth(0,0,0, oWaterCover);
 
 function fadeIn(){
 	fadeInCalled = true;
 }
 
-fadeIn();	
+fadeIn();
 
 function fadeOut(){
 	fadeOutCalled = true;	
