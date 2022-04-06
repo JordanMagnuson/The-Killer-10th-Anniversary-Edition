@@ -31,7 +31,6 @@ else if(walking)
 		if(alarm_get(1) <= 0)
 		{
 			alarm_set(1, STOP_DELAY_TIME * room_speed);
-			show_debug_message(alarm_get(1));
 		}
 	}
 }
@@ -73,5 +72,3 @@ else
 		}
 	}
 }
-
-show_debug_message(image_speed)
