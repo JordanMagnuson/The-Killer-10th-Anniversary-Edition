@@ -44,7 +44,7 @@ function createItemHere(){
 	}
 
 	//sounds
-	if (random_range(0,1) > 0.4){
+	if (random_range(0,1) > 0.4 and global.playSounds){
 		pan = choose( -1, 1) * random(1);
 		vol = 0.3 + 0.7 * random(1);
 		// Night sounds
