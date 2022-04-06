@@ -32,8 +32,8 @@ if(X){
 		walking = true;
 	}
 	else if(sprite_index == sprKillerWalk){
-		//if(global.victim.x -x <= PUSH_DISTANCE) //ADD AFTER VICTIM IS IMPLEMENTED
-			//push();
+		if(global.victim.x -x <= PUSH_DISTANCE)
+			push();
 		
 		//Reset canPush on the 3rd frame of the walking animation
 		if(image_index == 3){

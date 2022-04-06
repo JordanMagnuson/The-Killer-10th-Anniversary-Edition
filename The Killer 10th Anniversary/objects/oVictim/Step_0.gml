@@ -12,19 +12,12 @@ if(!walking)
 
 if(stumbling)
 {
-	if(image_speed == 0)
-	{
-		setGraphics("stumble");
-	}
+	setGraphics("stumble");
 	x += 0.2
 }
 else if(walking)
 {
-	
-	if(image_speed == 0)
-	{
-		setGraphics("walk");
-	}
+	setGraphics("walk");
 	
 	walkingSpeed -= .0001;
 	if(global.player.walking)
@@ -44,10 +37,7 @@ else if(walking)
 }
 else if(fastWalking)
 {
-	if(image_speed == 0)
-	{
-		setGraphics("fast_walk");
-	}
+	setGraphics("fast_walk");
 	
 	if(global.player.walking)
 	{
@@ -60,19 +50,18 @@ else if(fastWalking)
 }
 else if(runningAway)
 {
-	if(image_speed == 0)
-	{
-		setGraphics("run");
-	}
+	setGraphics("run");
 	x += RUN_SPEED;
 }
 else if(kneeling)
 {
 	setGraphics("kneel");
+	image_index = 0;
 }
 else
 {
 	setGraphics("stand");
+	image_index = 0;
 	if(global.player.walking)
 	{
 		if(oMyWorldController.oddFrame == 1)
@@ -84,3 +73,5 @@ else
 		}
 	}
 }
+
+show_debug_message(image_speed)

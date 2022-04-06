@@ -22,9 +22,9 @@ runningAway = false;
 fading = false;
 
 
+
 function kneel()
 {
-	image_speed = 0;
 	walking = false;
 	fastWalking = false;
 	kneeling = true;
@@ -32,7 +32,6 @@ function kneel()
 
 function stop()
 {
-	image_speed = 0;
 	// TODO: Stop Walking Sound
 	walking = false;
 	
@@ -42,10 +41,8 @@ function stop()
 
 function slowWalk()
 {
-	image_speed = 0;
 	if(fastWalking)
 	{
-			show_debug_message("cooL");
 		walking = true;
 		fastWalking = false;
 		
@@ -56,7 +53,6 @@ function slowWalk()
 
 function fastWalk()
 {
-	image_speed = 0;
 	//set fastwalk alarm
 	alarm_set(3, FAST_WALK_TIME * room_speed);
 	walking = false;
@@ -68,7 +64,6 @@ function fastWalk()
 
 function runAway()
 {
-	image_speed = 0;
 	walking = false;
 	fastWalking = false;
 	runningAway = true;
@@ -119,33 +114,21 @@ function setGraphics(_sprName)
 	{
 		case "stand":
 			sprite_index = sprVictim;
-			image_index = 0;
-			image_speed = 0;
 			break;
 		case "stumble":
 			sprite_index = sprVictim;
-			image_index = 0;
-			image_speed = 1/(animSpeed * room_speed);
 			break;
 		case "walk":
 			sprite_index = sprVictimWalkingSheet;
-			image_index = 0;
-			image_speed = 1/(animSpeed * .8 * room_speed);
 			break;
 		case "fast_walk":
 			sprite_index = sprVictimWalkingSheet;
-			image_index = 0;
-			image_speed = 1/(animSpeed * 1.2 * room_speed);
 			break;
 		case "run":
 			sprite_index = sprVictimWalkingSheet;
-			image_index = 0;
-			image_speed = 1/(animSpeed * 1.4 * room_speed);
 			break;
 		case "kneel":
 			sprite_index = sprVictimDying;
-			image_index = 0;
-			image_speed = 0;
 			break;
 		
 		default:
