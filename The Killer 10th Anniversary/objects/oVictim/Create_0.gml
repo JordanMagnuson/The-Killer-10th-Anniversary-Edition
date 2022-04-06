@@ -109,7 +109,7 @@ function fadeOut()
 
 function setGraphics(_sprName)
 {
-	show_debug_message("Sprite Changed:" + _sprName);
+	//show_debug_message("Sprite Changed:" + _sprName);
 	switch(_sprName)
 	{
 		case "stand":
