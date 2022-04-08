@@ -1,7 +1,7 @@
 DURATION = 10;
 FADE_IN_DURATION = 10 ;
 FADE_OUT_DURATION = 20;
-MAX_ALPHA = 0.3;
+MAX_ALPHA = 0.3;	
 TEMPCOUNTER = 0;
 sprite_index = sprSunset;
 fadein = false;
@@ -30,11 +30,11 @@ function fadeOut(){
 }
 
 function complete(){
-	//show_debug_message("SUNSET COMPLETE");
+	if (global.shotFired || global.exploded)
+		return;	
 	instance_create_depth(0,0,0, oNight);
 	oNight.Night();
 	fadeOut();
-	//destroy();//TEMPORARILY ADDED WHILE FADING IS OFF
 }
 
 function destroy(){
