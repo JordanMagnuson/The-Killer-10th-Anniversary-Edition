@@ -160,6 +160,7 @@
     {"id":{"name":"sndSilence","path":"sounds/sndSilence/sndSilence.yy",},"order":24,},
     {"id":{"name":"oGround","path":"objects/oGround/oGround.yy",},"order":15,},
     {"id":{"name":"sprTreePlains01","path":"sprites/sprTreePlains01/sprTreePlains01.yy",},"order":10,},
+    {"id":{"name":"oColors","path":"objects/oColors/oColors.yy",},"order":35,},
     {"id":{"name":"sndMeadowAmbience","path":"sounds/sndMeadowAmbience/sndMeadowAmbience.yy",},"order":19,},
     {"id":{"name":"sprEndScreen02","path":"sprites/sprEndScreen02/sprEndScreen02.yy",},"order":19,},
     {"id":{"name":"sprNightCover","path":"sprites/sprNightCover/sprNightCover.yy",},"order":31,},

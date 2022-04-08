@@ -24,6 +24,9 @@ currentLocation = instance_create_depth(0, 0, 0, oJungle);
 locationName = currentLocation.locationType; 
 alarm[0] = CHANGE_LOCATION_TIME;
 
+//colors
+instance_create_depth(0,0,0, oColors);
+
 // Sound Controller
 instance_create_depth(0,0,0, oSoundController);
 
