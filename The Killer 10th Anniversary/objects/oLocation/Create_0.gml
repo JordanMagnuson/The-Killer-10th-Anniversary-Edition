@@ -15,14 +15,14 @@ sEmit4 = 0;
 DAY_SOUND = "sndSilence";
 NIGHT_SOUND = "sndSilence";
 
-function Location(DAY_SOUND, NIGHT_SOUND, maxCreationTime = 4, minCreationTime = 0.4, creationTimeIncreaseRate = 0.4, creationTimeDecreaseRate = 0.4){
+function Location(DAY_SOUND, NIGHT_SOUND, maxCreationTime = 4, minCreationTime = 0.5, creationTimeIncreaseRate = 0.4, creationTimeDecreaseRate = 0.4){
 	daySound = DAY_SOUND;
 	nightSound = NIGHT_SOUND;
 		
-	self.maxCreationTime = (maxCreationTime / (100 / 100));//should be / (oPlayer.SPEED / 100)
-	self.minCreationTime = (minCreationTime / (100 / 100));
-	self.creationTimeIncreaseRate = (creationTimeIncreaseRate * (100 / 100));
-	self.creationTimeDecreaseRate = (creationTimeDecreaseRate * (100 / 100));
+	self.maxCreationTime = (maxCreationTime / (global.WALKING_SPEED / 100));//should be / (oPlayer.SPEED / 100)
+	self.minCreationTime = (minCreationTime / (global.WALKING_SPEED / 100));
+	self.creationTimeIncreaseRate = (creationTimeIncreaseRate * (global.WALKING_SPEED / 100));
+	self.creationTimeDecreaseRate = (creationTimeDecreaseRate * (global.WALKING_SPEED / 100));
 		
 	creationTime = maxCreationTime;
 	alarm[0] = creationTime * room_speed; 
