@@ -46,7 +46,6 @@ function releaseMeteorShower(){
 		if(random(1) < 0.1){
 			meteorShowerSeen= true;
 			instance_create_depth(0,0,0, oMeteorShower);
-			oMeteorShower.MeteorShower();
 		}
 	}
 }

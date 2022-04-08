@@ -10,12 +10,12 @@ MAX_TIME_BETWEEN = 0.7;
 
 starsReleased = 0;
 
-function MeteorShower()
-{
-	numOfStars = MIN_SHOOTING_STARS + (random(0.1)*(MAX_SHOOTING_STARS - MIN_SHOOTING_STARS));
-	show_debug_message("stars to release: " + string(numOfStars));   
-	direction = choose(-1,1);
-}
+numOfStars = MIN_SHOOTING_STARS + (random(0.1)*(MAX_SHOOTING_STARS - MIN_SHOOTING_STARS));
+show_debug_message("stars to release: " + string(numOfStars));   
+direction = choose(-1,1);
+
+changeTimeBetween();
+alarm[1] = timeBetween;
 
 function releaseStar()
 {
