@@ -1,6 +1,5 @@
 randomize();
 
-
 startedFadeOut = false;
 releasedMeteorShower = false;
 meteorShowerSeen = false;
@@ -13,8 +12,21 @@ FADE_OUT_DURATION = 10;
 sprite_index = sprStars;
 
 image_alpha = 0;
-depth = 500;
 
+
+shouldFadeIn = false;
+
+function stars(shouldFadeIn = true){
+	self.shouldFadeIn = shouldFadeIn;
+	depth = 500;
+	if(shouldFadeIn){
+		image_alpha = 0;	
+		fadeIn();
+	}
+	else{
+		image_alpha = 1;	
+	}
+}
 fadein = false;
 fadeout = false;
 
@@ -23,7 +35,6 @@ function fadeIn(){
 	fadein = true;	
 }
 
-fadeIn();
 alarm[0] = SHOOTING_STAR_FREQ * room_speed;
 alarm[1] = METEOR_SHOWER_FREQ * room_speed;
 

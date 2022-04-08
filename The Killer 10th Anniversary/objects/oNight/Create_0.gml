@@ -17,6 +17,7 @@ function Night(shouldFadeIn = true){
 	}
 	else{
 		instance_create_depth(0,0,0, oStars);
+		oStars.stars(false);
 		image_alpha = MAX_ALPHA;
 	}
 
