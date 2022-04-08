@@ -42,7 +42,7 @@ instance_create_depth(0,0,0, oMountainController);
 
 //Night-Day cycle
 instance_create_depth(0,0,0, oNight);
-oNight.Night();
+oNight.Night(false);
 time = "night";
 
 // Time Counter
