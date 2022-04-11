@@ -7,6 +7,7 @@ MIN_SHOOTING_STARS = 30
 
 MIN_TIME_BETWEEN = 0.1;
 MAX_TIME_BETWEEN = 0.7;
+timeBetween = MIN_TIME_BETWEEN; // basic initialization
 
 starsReleased = 0;
 
@@ -33,5 +34,5 @@ function releaseStar()
 }
 function changeTimeBetween()
 {
-	timeBetween = MIN_TIME_BETWEEN + random(0.1) * (MAX_TIME_BETWEEN - MIN_TIME_BETWEEN);
+	timeBetween = MIN_TIME_BETWEEN + random(1) * (MAX_TIME_BETWEEN - MIN_TIME_BETWEEN);
 }

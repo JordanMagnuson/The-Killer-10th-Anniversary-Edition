@@ -1,1 +1,1 @@
-nextText();
+fadeOut();
