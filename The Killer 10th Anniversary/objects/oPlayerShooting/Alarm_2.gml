@@ -1,0 +1,2 @@
+/// @description Kill Victim
+killVictim();

@@ -184,6 +184,7 @@
     {"id":{"name":"sprMusicChoiceScreen","path":"sprites/sprMusicChoiceScreen/sprMusicChoiceScreen.yy",},"order":30,},
     {"id":{"name":"oCrosshair","path":"objects/oCrosshair/oCrosshair.yy",},"order":36,},
     {"id":{"name":"sprGiantPine01","path":"sprites/sprGiantPine01/sprGiantPine01.yy",},"order":2,},
+    {"id":{"name":"oPlayerShooting","path":"objects/oPlayerShooting/oPlayerShooting.yy",},"order":38,},
     {"id":{"name":"sprGravestonePlains","path":"sprites/sprGravestonePlains/sprGravestonePlains.yy",},"order":3,},
     {"id":{"name":"sprCactusGiant","path":"sprites/sprCactusGiant/sprCactusGiant.yy",},"order":2,},
     {"id":{"name":"oCastle","path":"objects/oCastle/oCastle.yy",},"order":2,},

@@ -85,12 +85,8 @@ function stumble()
 
 function waitToFade()
 {
-
-//PORT TODO: This line is ready once global.victimStillRun has been set
-/*
 	//Set Wait to Fade Alarm
 	alarm_set(4, global.victimStillRun.DISPLAY_EACH_DURATION * room_speed);
-*/
 }
 
 

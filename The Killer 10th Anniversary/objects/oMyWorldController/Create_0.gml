@@ -142,7 +142,7 @@ function fadeAllItemsAfterExplosion(){
 
 function fadeAllItemsGeneric(duration = 10){//THIS MAY NOT WORK
 	for (var i = 0; i < instance_number(oItem); ++i;){
-		if(instance_find(oItem, i).type != cloud){
+		if(instance_find(oItem, i).type != "cloud"){
 			instance_find(oItem,i).fadeOutImage(duration);
 		}
 	}

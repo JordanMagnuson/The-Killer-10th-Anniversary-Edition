@@ -68,7 +68,7 @@ if(keyboard_check_released(vk_space)){
 	}
 	else{
 		//instance_create_depth(0, 0, 0, oTextUseMouse); // ADD THIS LINE WHEN OTEXTUSEMOUSE IS CREATED	
-		//instance_create_depth(0,0,0, oPlayerShooting); // ADD THIS LINE WHEN OPLAYERSHOOTING IS CREATED
+		global.playerShooting = instance_create_depth(0,0,0, oPlayerShooting);
 		global.playerShooting.x = x;
 		global.playerShooting.y = y;
 		
@@ -79,7 +79,8 @@ if(keyboard_check_released(vk_space)){
 		}
 		global.fadeSounds = false;
 		audio_stop_sound(sndWalking);
-		instance_destroy(self);
+		
+		instance_destroy(self);		//Destroying player causes crash in oMyWorldController at end game
 	}
 }
 
