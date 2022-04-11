@@ -9,6 +9,8 @@ overlap = false;
 // New 'canDestroy' variable not in original AS3 source code. 
 // Used by objects like oRiver to prevent being desroyed while sound is still playing.
 canDestroy = true;
+duration = 10; // used by fading in step code
+fading = false;
 //---------------------------------------------------------------
 
 function Item(sprite, distance = "mid", overlap = true){
@@ -54,6 +56,16 @@ function Item(sprite, distance = "mid", overlap = true){
 		}
 	} 
 }	
+
+function waitToFade(duration = 3){
+	alarm[0] = duration;
+}
+
+function fadeOutImage(duration = 10){
+	self.duration = duration;
+	fading = true;
+}
+
 function offScreenAction() {
 	// 'canDestroy' variable is new from original AS3 source code. See above.
 	if (canDestroy) {

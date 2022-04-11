@@ -99,7 +99,7 @@ function explode(){
 	//instance_create_depth(0,0,0, oExplodedPlayer);
 	//instance_create_depth(0,0,0, oExplodedVictim);
 	instance_destroy(oPlayer);
-	//instance_destroy(oVictim);
+	instance_destroy(oVictim);
 	
 	audio_stop_sound(music);
 	global.playSounds = false;
@@ -141,23 +141,21 @@ function fadeAllItemsAfterExplosion(){
 }
 
 function fadeAllItemsGeneric(duration = 10){//THIS MAY NOT WORK
-/*	oItem NOT YET CREATED
 	for (var i = 0; i < instance_number(oItem); ++i;){
 		if(instance_find(oItem, i).type != cloud){
 			instance_find(oItem,i).fadeOutImage(duration);
 		}
 	}
-	*/
 }
 
 function fadeItem(){ //THIS MAY NOT WORK
 	show_debug_message("Fade item");
-	itemList = ds_list_create()
-	/*	oItem NOT YET CREATED
-	for (var i = 0; i < instance_number(oItem); ++i;){
+	itemList = ds_list_create();
+
+	for (var i = 0; i < instance_number(oItem); i++;){
 		ds_list_add(itemList, instance_find(oItem,i));
 	}
-	*/
+	
 	if(itemList){
 		ds_list_shuffle(itemList);
 		do{
@@ -203,9 +201,9 @@ function changeLocation(location = ""){
 		oSoundController.changeLocation(newLocation);
 	instance_destroy(self.location);
 
-	/*If(newLocation == "jungle")
-		instance_create_depth(0,0,0, oJungle);	UNCOMMENT WHEN OJUNGLE IS CREATED
-	else*/ if (newLocation == "forest")
+	if(newLocation == "jungle")
+		instance_create_depth(0,0,0, oJungle);
+	else if (newLocation == "forest")
 		instance_create_depth(0,0,0, oForest);
 	else if (newLocation == "plains")
 		instance_create_depth(0,0,0, oPlains);
@@ -274,26 +272,26 @@ function advanceTime(){
 		case "day":
 			instance_create_depth(0, 0, 999, oSunset)
 			oSunset.Sunset();
-			//oDay.complete();
+			oDay.complete();
 			break;
 		case "sunset":
 			instance_create_depth(0, 0, 999, oNight)
 			oNight.Night();
-			//oSunset.complete();
+			oSunset.complete();
 			break;
 		case "night":
 			instance_create_depth(0, 0, 999 , oDay);
 			oDay.Day(self);
-			//oNight.complete();
+			oNight.complete();
 			break;
 	}
 }
 
 function showTextPress(){
-	//if(!global.startedWalking)
-		//instance_create_depth(0,0,0, oTextPress) UNCOMMENT WHEN OTEXTPRESS IS CREATED
+	if(!global.startedWalking)
+		instance_create_depth(0,0,0, oTextPress);
 }
 
 function showTitle(){
-	//instance_create_depth(0,0,0, oTextJordan);	UNCOMMENT WHEN OTEXTJORDAN IS CREATED
+	instance_create_depth(0,0,0, oTextJordan);	
 }

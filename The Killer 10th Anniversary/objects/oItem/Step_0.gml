@@ -35,9 +35,10 @@ if(instance_exists(oPlayer) && oPlayer.walking){
 			break;
 	}
 }
-/*
-else{
-	show_debug_message("OPLAYER ELSE STATEMENT");
-}
-*/
 
+if(fading and image_alpha > 0){
+	image_alpha -= (1/duration)/room_speed;	
+}
+if(image_alpha <= 0 and canDestroy){
+		instance_destroy();
+}
