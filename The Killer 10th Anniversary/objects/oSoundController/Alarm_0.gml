@@ -1,0 +1,2 @@
+/// @description fader- fadeComplete
+fadeComplete();

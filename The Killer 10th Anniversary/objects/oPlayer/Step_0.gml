@@ -13,9 +13,9 @@ if(X){
 		return;
 	}
 	if(!global.startedWalking){
-		//global.timeCounter.started = true; ADD LINE AFTER TIME COUNTER IS IMPLEMENTED
+		global.timeCounter.started = true;
 		if(global.MUSIC_WHILE_WALKING){
-			//oSoundController.fadeout(5); //	OSOUNDCONTROLLER IS NOT MADE YET
+			oSoundController.fadeout(5); 
 			//(FP.world as MyWorld).music.loop();	//NOT SURE WHAT THIS DOES
 		}
 		standingPush();

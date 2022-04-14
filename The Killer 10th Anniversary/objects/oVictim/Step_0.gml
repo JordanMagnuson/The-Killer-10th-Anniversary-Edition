@@ -20,7 +20,7 @@ else if(walking)
 	setGraphics("walk");
 	
 	walkingSpeed -= .0001;
-	if(global.player.walking)
+	if(oPlayer.walking)
 	{
 		x -= (DEFAULT_WALKING_SPEED - walkingSpeed);
 	}
@@ -38,7 +38,7 @@ else if(fastWalking)
 {
 	setGraphics("fast_walk");
 	
-	if(global.player.walking)
+	if(oPlayer.walking)
 	{
 		x += WALK_FAST_SPEED - DEFAULT_WALKING_SPEED;
 	}
@@ -61,7 +61,7 @@ else
 {
 	setGraphics("stand");
 	image_index = 0;
-	if(global.player.walking)
+	if(oPlayer.walking)
 	{
 		if(oMyWorldController.oddFrame == 1)
 			x -= .5;

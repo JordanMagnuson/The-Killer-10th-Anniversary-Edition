@@ -18,16 +18,17 @@ function createItemHere(){
 	oLocation.createItem();
 	
 	creationNumber = random(1);
-	
-	if(random(1) > 0.05){
-		if(creationNumber < 0.1){
-			instance_create_depth(room_width+10, 175,0, oJungleTree);
-		}
-		else if(creationNumber < 0.5){
-			instance_create_depth(room_width+10, 175,0, oBush);
-		}
-		else if(creationNumber < 1){
-			instance_create_depth(room_width+10, 175,0, oPalm);
+	if(oPlayer.walking){ //stop item generation while not walking
+		if(random(1) > 0.05){
+			if(creationNumber < 0.1){
+				instance_create_depth(room_width+10, 175,0, oJungleTree);
+			}
+			else if(creationNumber < 0.5){
+				instance_create_depth(room_width+10, 175,0, oBush);
+			}
+			else if(creationNumber < 1){
+				instance_create_depth(room_width+10, 175,0, oPalm);
+			}
 		}
 	}
 	

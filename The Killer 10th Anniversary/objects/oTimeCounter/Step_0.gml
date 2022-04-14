@@ -1,4 +1,4 @@
 if(started){
-	timePassedSinceLastLocationChange += delta_time;
-	timePassed =+ delta_time;
+	timePassedSinceLastLocationChange += delta_time / 1000000;
+	timePassed += delta_time / 1000000;
 }

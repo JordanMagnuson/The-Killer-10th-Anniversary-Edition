@@ -21,7 +21,7 @@ room_width = 300;
 room_speed = 30;
 
 currentLocation = instance_create_depth(0, 0, 0, oJungle);
-locationName = currentLocation.locationType; 
+location = currentLocation.locationType; 
 alarm[0] = CHANGE_LOCATION_TIME;
 
 //colors
@@ -89,7 +89,7 @@ show_debug_message("Time in beach: " + string(global.timeInBeach));
 
 
 function explode(){
-	if(global.player.walking){
+	if(oPlayer.walking){
 		alarm[3] = 1 * room_speed;
 		return;
 	}
@@ -173,45 +173,55 @@ function fadeItem(){ //THIS MAY NOT WORK
 
 function changeLocation(location = ""){
 	show_debug_message("Change Location");
-	show_debug_message("Location changes: " + global.locationChanges);
-	show_debug_message("time since last location: " + oTimeCounter.timePassedSinceLastLocationChange);
+	show_debug_message("Location changes: " + string(global.locationChanges));
+	show_debug_message("time since last location: " + string(oTimeCounter.timePassedSinceLastLocationChange));
 	oTimeCounter.timePassedSinceLastLocationChange = 0;
+	instance_destroy(self.currentLocation);
 	
 	switch(global.locationChanges){
 		case 0:
-			newLocation = instance_create_depth(0,0,0,oForest); 
+			currentLocation = instance_create_depth(0,0,0,oForest);
+			location = "forest";
 			break;
 		case 1:
-			newLocation = instance_create_depth(0,0,0,oBeach);	
+			currentLocation = instance_create_depth(0,0,0,oBeach);	
+			location = "beach";
 			break;
 		case 2:
 			global.touchedPlains = true;
 			alarm[2] = 15 * room_speed;
 			show_debug_message("Reached plains alarm set");
-			newLocation = instance_create_depth(0,0,0, oPlains);
+			currentLocation = instance_create_depth(0,0,0, oPlains);
+			location = "plains";
 			break;
 	}
 	
-	if(newLocation = ""){
+	
+	if(location = ""){
 		do{
-		newLocation = choose("jungle", "forest", "plains", "beach");	
-		}until (newLocation != self.location.type);
+			location = choose("jungle", "forest", "plains", "beach");	
+		}until (location != currentLocation.locationType);
+		
+		if(location == "jungle"){
+			currentLocation = instance_create_depth(0, 0, 0, oJungle); 
+		}
+		else if(location == "beach"){
+			currentLocation = instance_create_depth(0, 0, 0, oBeach);
+		}
+		else if(location == "forest"){
+			currentLocation = instance_create_depth(0, 0, 0, oForest);
+		}
+		else if(location == "plains"){
+			currentLocation = instance_create_depth(0, 0, 0, oPlains);
+		}
 	}
 	if(oSoundController)
-		oSoundController.changeLocation(newLocation);
-	instance_destroy(self.location);
-
-	if(newLocation == "jungle")
-		instance_create_depth(0,0,0, oJungle);
-	else if (newLocation == "forest")
-		instance_create_depth(0,0,0, oForest);
-	else if (newLocation == "plains")
-		instance_create_depth(0,0,0, oPlains);
-	else if (newLocation == "forest")
-		instance_create_depth(0,0,0, oBeach);	
+		oSoundController.changeLocation(location);
+	
+	self.location = currentLocation.locationType;
+	show_debug_message(self.location)
 	oLocation.Location();    
-	oLocation.creationTime = 2;
-	oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds
+	
 
 	//destroys old ground when change location is spammed
 	if(variable_instance_exists(oMyWorldController, "oldGround")){ 
@@ -221,6 +231,7 @@ function changeLocation(location = ""){
 	}
 	oldGround = ground;
 	ground = instance_create_depth(room_width, oGround.y, 12, oGround);	
+	
 	global.locationChanges++;
 }
 
@@ -244,21 +255,21 @@ function changeLocationChance(){
 		return;	
 	}
 
-	switch(location.creationTimeSlope){
+	switch(oLocation.creationTimeSlope){
 		case 1:
-			if (location.creationTime < (location.minCreationTime * 2)){
+			if (oLocation.creationTime < (oLocation.minCreationTime * 2)){
 				if (random(1) > 0.6){
-					location.creationTimeSlope = 0;
+					oLocation.creationTimeSlope = 0;
 				}
 			}
 			break;
 		case 0:
 			if (random(1) > 0.6){
-				location.creationTimeSlope = -1;
+				oLocation.creationTimeSlope = -1;
 			}
 			break;
 		case -1:
-			if (location.creationTime > (location.maxCreationTime * 0.75)){
+			if (oLocation.creationTime > (oLocation.maxCreationTime * 0.75)){
 				if (random(1) > 0.6){
 					changeLocation();
 				}		

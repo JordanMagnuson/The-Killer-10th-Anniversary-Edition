@@ -20,11 +20,6 @@ global.timeInBeach = global.MIN_TIME_IN_BEACH + random(1) * (global.MAX_TIME_IN_
 global.START_MUSIC_IN = global.timeInJungle + global.timeInForest + 10;
 global.MUSIC_IN_DURATION = 30;		
 		
-//global.timeInJungle = 90;
-//global.timeInForest = 90;
-//global.timeInBeach = 90;	
-		
-		
 global.EARLIEST_EXPLOSION = global.timeInJungle;
 global.LATEST_EXPLOSION = global.timeInJungle + global.timeInForest + global.timeInBeach;
 global.EXPLOSION_CHANCE = 0.25;

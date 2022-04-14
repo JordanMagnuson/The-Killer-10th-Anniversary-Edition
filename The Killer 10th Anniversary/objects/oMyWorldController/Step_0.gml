@@ -54,16 +54,16 @@ else
 }
 
 // Time to switch out of jungle?
-if(global.player.walking && global.locationChanges == 0 && global.timeCounter.timePassedSinceLastLocationChange >= global.timeInJungle){
+if(oPlayer.walking && global.locationChanges == 0 && global.timeCounter.timePassedSinceLastLocationChange >= global.timeInJungle){
 	show_debug_message("Exceeded time in jungle - change out");
 	changeLocation();
 	global.stillInJungle = false;
 }
-else if (global.player.walking && global.locationChanges == 1 && global.timeCounter.timePassedSinceLastLocationChange >= global.timeInForest){
+else if (oPlayer.walking && global.locationChanges == 1 && global.timeCounter.timePassedSinceLastLocationChange >= global.timeInForest){
 	show_debug_message("Exceeded time in forest - change out")	
 	changeLocation();
 }
-else if (global.player.walking && global.locationChanges == 2 && global.timeCounter.timePassedSinceLastLocationChange >= global.timeInBeach){
+else if (oPlayer.walking && global.locationChanges == 2 && global.timeCounter.timePassedSinceLastLocationChange >= global.timeInBeach){
 	show_debug_message("Exceeded time in beach - change out")	
 	changeLocation();
 }

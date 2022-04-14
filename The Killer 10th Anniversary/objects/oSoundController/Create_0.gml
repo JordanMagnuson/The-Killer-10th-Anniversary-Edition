@@ -1,25 +1,57 @@
 FADE_DURATION = 10;
 inProcess = false;
+soundsStopped = false;
+fadingOut = false;
+
 newSound = asset_get_index(oLocation.daySound); //set to base value
 soundEmitter00 = audio_emitter_create();
 soundEmitter01 = audio_emitter_create();
 currentGain00 = 1; //gain for soundEmitter00
 currentGain01 = 0; //gain for soundEmitter01
+fadeOnOne = false;
+fadeOnTwo = false;
+location = "";
+currentSound = "";
 
 function soundController(location){
-	currentSound =  asset_get_index(oLocation.daySound);
-	audio_emitter_gain(soundEmitter00, currentGain00);
-	audio_play_sound_on(soundEmitter00, currentSound, 1, 100);
+	self.location = location;
+	if(oMyWorldController.time == "day"){
+		currentSound = oLocation.daySound;
+	}	
+	else{
+		currentSound = oLocation.nightSound;
+	}
+	audio_play_sound_on(soundEmitter00, currentSound, true, 100);
+	
+}
+
+function fadeOut(){
+	if(inProcess)
+		return;
+	global.fadeSounds = true;
+	global.playSounds = false;
+	alarm[0] = duration; //when the fading is complete, call fadeComplete();
+	fadingOut = true;
+}
+
+function stopSounds(){	//NOTE: There is an audio_stop_all() function built into GMS2 that may be good here
+	if(global.fadeSounds){
+		fadingOut = true;
+		if(inProcess){
+			duration = 0.01;
+			alarm[0] = duration;
+		}
+		audio_stop_sound(newSound);
+		audio_stop_sound(currentSound);
+		soundsStopped = true;
+			
+	}	
 }
 
 function changeLocation(location){
-	//show_debug_message("change location");
-	if(inProcess == true){
-		//show_debug_message("in process");
-		//show_debug_message("current sound vol: " + currentSound.volume);
-		//show_debug_message("new sound vol: " + newSound.volume);
-	}
-	else{
+	if(!global.playSounds || global.fadeSounds)
+		return;
+	if(!inProcess){
 		if(oMyWorldController.time == "day"){
 			newSound =  asset_get_index(oLocation.daySound);	
 		}
@@ -52,6 +84,23 @@ function fadeComplete(){
 	soundEmitter01 = audio_emitter_create();
 	audio_emitter_gain(soundEmitter01, currentGain01);
 	
+	if(fadingOut){
+		fadingOut = false;
+		global.fadeSounds = false;
+	}
+	
+	if(global.fadeSounds && !fadingOut){
+		fadeOut();	
+	}
+	
+	if(global.fadeSounds){
+		return;	
+	}
+	
+	if(!global.playSounds){
+		stopSounds();	
+	}
+	
 	if(oMyWorldController.time == "day" && currentSound != asset_get_index(oLocation.daySound)){
 		show_debug_message("catching up with day");
 		startDay();	
@@ -66,6 +115,10 @@ function fadeComplete(){
 }
 
 function startNight(){
+	
+	if(!global.playSounds || global.fadeSounds)
+		return;
+		
 	show_debug_message("start night");
 	if(inProcess == true){
 		show_debug_message("in process");
@@ -82,6 +135,8 @@ function startNight(){
 }
 
 function startDay(){
+	if(!global.playSounds || global.fadeSounds)
+		return;
 	show_debug_message("start day");
 	if(inProcess == true){
 		show_debug_message("in process");

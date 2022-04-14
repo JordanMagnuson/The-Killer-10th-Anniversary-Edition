@@ -1,3 +1,4 @@
+walking = false;
 MAX_TIME_TILL_KNEEL = 8;
 MIN_TIME_TILL_KNEEL = 4;
 

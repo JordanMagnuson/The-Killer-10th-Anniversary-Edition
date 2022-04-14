@@ -1,6 +1,6 @@
 y = 175;
-currentLocation = oMyWorldController.locationName;
-switch (oMyWorldController.locationName){
+currentLocation = oMyWorldController.location;
+switch (oMyWorldController.location){
 	case "forest":
 		sprite_index = sprGroundForest;
 		break;

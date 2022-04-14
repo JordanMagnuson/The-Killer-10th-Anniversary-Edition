@@ -15,6 +15,11 @@ numOfStars = MIN_SHOOTING_STARS + (random(0.1)*(MAX_SHOOTING_STARS - MIN_SHOOTIN
 show_debug_message("stars to release: " + string(numOfStars));   
 direction = choose(-1,1);
 
+function changeTimeBetween()
+{
+	timeBetween = MIN_TIME_BETWEEN + random(1) * (MAX_TIME_BETWEEN - MIN_TIME_BETWEEN);
+}
+
 changeTimeBetween();
 alarm[1] = timeBetween;
 
@@ -31,8 +36,4 @@ function releaseStar()
 		instance_destroy(self);	
 	}
 	
-}
-function changeTimeBetween()
-{
-	timeBetween = MIN_TIME_BETWEEN + random(1) * (MAX_TIME_BETWEEN - MIN_TIME_BETWEEN);
 }

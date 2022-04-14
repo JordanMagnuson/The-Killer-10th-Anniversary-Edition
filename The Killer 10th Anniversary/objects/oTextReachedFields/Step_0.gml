@@ -8,7 +8,8 @@ if(fadein == true)
 if(alpha >=1){
 	fadeOut();
 	fadein = false;
-	oTextPress.fadeOut();
+	if(instance_exists(oTextPress))
+		oTextPress.fadeOut(); 
 }
 if(fade == true){
 	if(alpha == 0)
