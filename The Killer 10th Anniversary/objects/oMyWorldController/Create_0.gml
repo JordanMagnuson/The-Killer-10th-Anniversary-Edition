@@ -27,6 +27,9 @@ alarm[0] = CHANGE_LOCATION_TIME;
 //colors
 instance_create_depth(0,0,0, oColors);
 
+// Sound Controller
+instance_create_depth(0,0,0, oSoundController);
+
 // Ground and Sky
 ground = instance_create_depth(0,175,12, oGround);
 oGround.x = -sprite_get_width(sprGroundBeach)/2;
@@ -111,7 +114,7 @@ function startFallingCamera(){
 function fadeMusicIn(duration = 10){
 	show_debug_message("Music fading in");
 	musicStarted = true;
-	oSoundController.fadeout(duration);
+	//oSoundController.fadeout(duration); IMPLEMENT AFTER FADEOUT FUNCTION HAS BEEN ADDED
 	global.playSounds = false;
 	global.fadeSounds = true;
 	//music.loop(0); AGAIN, NOT SURE HOW TO CONVERT THIS
