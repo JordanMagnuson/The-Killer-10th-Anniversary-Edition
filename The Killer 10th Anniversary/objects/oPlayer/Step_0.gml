@@ -67,7 +67,7 @@ if(keyboard_check_released(vk_space)){
 		global.numberOfStops++;
 	}
 	else{
-		//instance_create_depth(0, 0, 0, oTextUseMouse); // ADD THIS LINE WHEN OTEXTUSEMOUSE IS CREATED	
+		instance_create_depth(0, 0, 0, oTextUseMouse);	
 		global.playerShooting = instance_create_depth(0,0,0, oPlayerShooting);
 		global.playerShooting.x = x;
 		global.playerShooting.y = y;

@@ -6,7 +6,7 @@ text = "";
 draw_set_font(fntFont);
 
 x = 20;
-y = 100;
+y = 130;
 alpha = 0;
 
 if(global.touchedPlains)

@@ -226,8 +226,8 @@ function changeLocation(location = ""){
 
 function reachedPlains(){
 	show_debug_message("reached plains");
-	//if (oPlayer.walking)
-		//instance_create_depth(0,0,0,oTextReachedFields); UNCOMMENT WHEN OTEXTREACHEDFIELDS HAS BEEN FINISHED
+	if (oPlayer.walking)
+		instance_create_depth(0,0,0,oTextReachedFields);
 	global.reachedPlains = true;
 }
 
