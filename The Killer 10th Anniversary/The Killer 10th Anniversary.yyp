@@ -44,6 +44,7 @@
     {"id":{"name":"oBarrenTree","path":"objects/oBarrenTree/oBarrenTree.yy",},"order":0,},
     {"id":{"name":"sprVictimRunningSheet","path":"sprites/sprVictimRunningSheet/sprVictimRunningSheet.yy",},"order":42,},
     {"id":{"name":"oNight","path":"objects/oNight/oNight.yy",},"order":19,},
+    {"id":{"name":"oTextNotFarEnough","path":"objects/oTextNotFarEnough/oTextNotFarEnough.yy",},"order":39,},
     {"id":{"name":"oPlainsPalm","path":"objects/oPlainsPalm/oPlainsPalm.yy",},"order":4,},
     {"id":{"name":"sprGun","path":"sprites/sprGun/sprGun.yy",},"order":23,},
     {"id":{"name":"oVictimStillRunController","path":"objects/oVictimStillRunController/oVictimStillRunController.yy",},"order":33,},

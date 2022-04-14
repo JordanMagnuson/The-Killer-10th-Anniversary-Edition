@@ -63,7 +63,7 @@ else{
 
 if(keyboard_check_released(vk_space)){
 	if(!global.reachedPlains){
-		//instance_create_depth(0, 0, 0, oTextNotFarEnough); 	//ADD THIS LINE WHEN OTEXTNOTFARENOUGH IS CREATED
+		instance_create_depth(0, 0, 0, oTextNotFarEnough);
 		global.numberOfStops++;
 	}
 	else{
