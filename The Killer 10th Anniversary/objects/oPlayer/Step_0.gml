@@ -73,14 +73,13 @@ if(keyboard_check_released(vk_space)){
 		global.playerShooting.y = y;
 		
 		if(global.MUSIC_WHILE_WALKING){
-			//FP.world.add((FP.world as MyWorld).soundController = new SoundController((FP.world as MyWorld).location)); //NOT SURE WHAT THIS LINE IS SUPPOSED TO DO
 			//(FP.world as MyWorld).music.stop(); //NOT SURE WHAT THIS LINE DOES
 			global.playSounds = true;
 		}
 		global.fadeSounds = false;
 		audio_stop_sound(sndWalking);
 		
-		instance_destroy(self);		//Destroying player causes crash in oMyWorldController at end game
+		instance_destroy(self);
 	}
 }
 

@@ -18,7 +18,7 @@ image = sprSky;
 
 function Sky()
 {
-	cloudReleaseTime = MIN_CLOUD_RELEASE_TIME + random(0.1) * (MAX_CLOUD_RELEASE_TIME - MIN_CLOUD_RELEASE_TIME);
+	cloudReleaseTime = MIN_CLOUD_RELEASE_TIME + random(1) * (MAX_CLOUD_RELEASE_TIME - MIN_CLOUD_RELEASE_TIME);
 	cloudCoverSlope = choose(1,-1);
 	
 	sprite_index = image;

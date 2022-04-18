@@ -15,6 +15,7 @@ music = sndMusicJonsiTornado;
 musicEnd = sndJonsiTornadoEnd;
 musicStarted = false;
 musicEmit = audio_emitter_create();
+explosionEmitter = audio_emitter_create();
 
 room_height = 200
 room_width = 300;
@@ -95,11 +96,18 @@ function explode(){
 	}
 	global.rate = 0.4 
 	global.exploded = true;
-	//instance_create_depth(0,0,0, oExplosion);
-	//instance_create_depth(0,0,0, oExplodedPlayer);
-	//instance_create_depth(0,0,0, oExplodedVictim);
+	instance_create_depth(0,0,0, oExplosion);
+	
+	audio_play_sound_on(explosionEmitter, sndExplosion, false, 100);
+	audio_emitter_gain(explosionEmitter, 0.8);
+	
 	instance_destroy(oPlayer);
-	instance_destroy(oVictim);
+	//instance_destroy(oVictim);
+	instance_create_depth(0,0,0, oExplodedPlayer);
+	//instance_create_depth(0,0,0, oExplodedVictim);
+	
+	
+	
 	
 	audio_stop_sound(music);
 	global.playSounds = false;
@@ -114,7 +122,7 @@ function startFallingCamera(){
 function fadeMusicIn(duration = 10){
 	show_debug_message("Music fading in");
 	musicStarted = true;
-	//oSoundController.fadeout(duration); IMPLEMENT AFTER FADEOUT FUNCTION HAS BEEN ADDED
+	oSoundController.fadeout(duration);
 	global.playSounds = false;
 	global.fadeSounds = true;
 	//music.loop(0); AGAIN, NOT SURE HOW TO CONVERT THIS
