@@ -209,6 +209,7 @@
     {"id":{"name":"sprCloud08","path":"sprites/sprCloud08/sprCloud08.yy",},"order":14,},
     {"id":{"name":"sndExplosion","path":"sounds/sndExplosion/sndExplosion.yy",},"order":3,},
     {"id":{"name":"sndJungleDay","path":"sounds/sndJungleDay/sndJungleDay.yy",},"order":11,},
+    {"id":{"name":"oFadeOut","path":"objects/oFadeOut/oFadeOut.yy",},"order":46,},
     {"id":{"name":"sprMountainPlains02","path":"sprites/sprMountainPlains02/sprMountainPlains02.yy",},"order":4,},
     {"id":{"name":"sprBush02","path":"sprites/sprBush02/sprBush02.yy",},"order":1,},
     {"id":{"name":"sndWolf","path":"sounds/sndWolf/sndWolf.yy",},"order":30,},

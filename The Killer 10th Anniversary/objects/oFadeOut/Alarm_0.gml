@@ -1,0 +1,2 @@
+/// @description _bufferAlarm
+switchWorlds();

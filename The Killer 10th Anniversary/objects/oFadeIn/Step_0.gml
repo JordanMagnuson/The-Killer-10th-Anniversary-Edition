@@ -4,7 +4,7 @@
 //the color here is just black so we might be able to get away with just altering the speed of the fade
 if(_bufferComplete){	
 	if(image_alpha > 0){
-		image_alpha -= 	(1/FADE_OUT_DURATION)/room_speed;
+		image_alpha -= 	(1/_time)/room_speed;
 	}
 	else{
 		destroy();
