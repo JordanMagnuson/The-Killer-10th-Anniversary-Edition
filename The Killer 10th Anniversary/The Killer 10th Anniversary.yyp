@@ -125,6 +125,7 @@
     {"id":{"name":"oGun","path":"objects/oGun/oGun.yy",},"order":37,},
     {"id":{"name":"sprPine04","path":"sprites/sprPine04/sprPine04.yy",},"order":11,},
     {"id":{"name":"sprButte01","path":"sprites/sprButte01/sprButte01.yy",},"order":0,},
+    {"id":{"name":"oFadeIn","path":"objects/oFadeIn/oFadeIn.yy",},"order":45,},
     {"id":{"name":"sprTumbleweed","path":"sprites/sprTumbleweed/sprTumbleweed.yy",},"order":12,},
     {"id":{"name":"oExplodedVictim","path":"objects/oExplodedVictim/oExplodedVictim.yy",},"order":44,},
     {"id":{"name":"sprPine02","path":"sprites/sprPine02/sprPine02.yy",},"order":9,},
