@@ -17,6 +17,7 @@
     {"id":{"name":"gmcallback_start_game","path":"scripts/gmcallback_start_game/gmcallback_start_game.yy",},"order":0,},
     {"id":{"name":"sprPine03","path":"sprites/sprPine03/sprPine03.yy",},"order":10,},
     {"id":{"name":"sprMountainJungle02","path":"sprites/sprMountainJungle02/sprMountainJungle02.yy",},"order":4,},
+    {"id":{"name":"oClickToContinue","path":"objects/oClickToContinue/oClickToContinue.yy",},"order":47,},
     {"id":{"name":"sprEndScreen01Explosion","path":"sprites/sprEndScreen01Explosion/sprEndScreen01Explosion.yy",},"order":17,},
     {"id":{"name":"oShootingStar","path":"objects/oShootingStar/oShootingStar.yy",},"order":21,},
     {"id":{"name":"oTextReachedFields","path":"objects/oTextReachedFields/oTextReachedFields.yy",},"order":40,},
