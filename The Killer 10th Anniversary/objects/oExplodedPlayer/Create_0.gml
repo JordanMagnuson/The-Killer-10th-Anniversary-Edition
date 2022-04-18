@@ -1,7 +1,7 @@
 walking = false;
 
 sprite_index = sprKillerDead;
-x = 50;
+x = 50 - 10;
 y = oGround.y;
 	
 //hit box

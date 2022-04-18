@@ -90,7 +90,7 @@ show_debug_message("Time in beach: " + string(global.timeInBeach));
 
 
 function explode(){
-	if(oPlayer.walking){
+	if(!oPlayer.walking){
 		alarm[3] = 1 * room_speed;
 		return;
 	}
@@ -101,10 +101,14 @@ function explode(){
 	audio_play_sound_on(explosionEmitter, sndExplosion, false, 100);
 	audio_emitter_gain(explosionEmitter, 0.8);
 	
+	var victimx = oVictim.x;
+	var victimy = oVictim.y;
 	instance_destroy(oPlayer);
+	instance_destroy(oVictim);
 	instance_create_depth(0,0,0, oExplodedPlayer);
 	instance_create_depth(0,0,0, oExplodedVictim);
-	instance_destroy(oVictim);
+	oExplodedVictim.ExplodedVictim(victimx, victimy);
+	
 	
 	
 	

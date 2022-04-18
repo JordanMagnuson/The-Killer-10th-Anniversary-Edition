@@ -69,7 +69,7 @@ package game
 		{
 			_alphaTween = new ColorTween(destroy);
 			addTween(_alphaTween);		
-			_alphaTween.tween(_time, _color, 0x000000, 1, 0, Ease.quadIn);	
+			_alphaTween.tween(_time, _color, 0x000000, 1, 0, Ease.quadIn);	//TWEENS THE _COLOR TO BLACK AND THE ALPHA VALUE FROM 1 TO 0
 			_bufferComplete = true;
 		}
 		
