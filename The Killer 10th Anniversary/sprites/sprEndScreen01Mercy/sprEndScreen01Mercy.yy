@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a427e759-7f9d-4440-b3f9-9a0a6f61eef4","path":"sprites/sprEndScreen01Killer/sprEndScreen01Killer.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a427e759-7f9d-4440-b3f9-9a0a6f61eef4","path":"sprites/sprEndScreen01Killer/sprEndScreen01Killer.yy",},"LayerId":{"name":"41b30340-1cdb-4602-b360-eab0c93fedbc","path":"sprites/sprEndScreen01Killer/sprEndScreen01Killer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEndScreen01Killer","path":"sprites/sprEndScreen01Killer/sprEndScreen01Killer.yy",},"resourceVersion":"1.0","name":"a427e759-7f9d-4440-b3f9-9a0a6f61eef4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"acfa6417-eb73-4aaf-a075-a86062ee7104","path":"sprites/sprEndScreen01Mercy/sprEndScreen01Mercy.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"acfa6417-eb73-4aaf-a075-a86062ee7104","path":"sprites/sprEndScreen01Mercy/sprEndScreen01Mercy.yy",},"LayerId":{"name":"2510690c-8c0a-41ce-9fcf-b347f94f15a8","path":"sprites/sprEndScreen01Mercy/sprEndScreen01Mercy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprEndScreen01Mercy","path":"sprites/sprEndScreen01Mercy/sprEndScreen01Mercy.yy",},"resourceVersion":"1.0","name":"acfa6417-eb73-4aaf-a075-a86062ee7104","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprEndScreen01Killer","path":"sprites/sprEndScreen01Killer/sprEndScreen01Killer.yy",},
+    "spriteId": {"name":"sprEndScreen01Mercy","path":"sprites/sprEndScreen01Mercy/sprEndScreen01Mercy.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fd542c51-dc6c-429e-82cf-36a3187e4fc2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a427e759-7f9d-4440-b3f9-9a0a6f61eef4","path":"sprites/sprEndScreen01Killer/sprEndScreen01Killer.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bbb98d7c-0ff4-4ef9-9f4c-337b4da06897","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"acfa6417-eb73-4aaf-a075-a86062ee7104","path":"sprites/sprEndScreen01Mercy/sprEndScreen01Mercy.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprEndScreen01Killer","path":"sprites/sprEndScreen01Killer/sprEndScreen01Killer.yy",},
+    "parent": {"name":"sprEndScreen01Mercy","path":"sprites/sprEndScreen01Mercy/sprEndScreen01Mercy.yy",},
     "resourceVersion": "1.3",
-    "name": "sprEndScreen01Killer",
+    "name": "sprEndScreen01Mercy",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"41b30340-1cdb-4602-b360-eab0c93fedbc","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2510690c-8c0a-41ce-9fcf-b347f94f15a8","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprEndScreen01Killer",
+  "name": "sprEndScreen01Mercy",
   "tags": [],
   "resourceType": "GMSprite",
 }
