@@ -138,6 +138,7 @@
     {"id":{"name":"oExplodedVictim","path":"objects/oExplodedVictim/oExplodedVictim.yy",},"order":44,},
     {"id":{"name":"sprPine02","path":"sprites/sprPine02/sprPine02.yy",},"order":9,},
     {"id":{"name":"sprCactus01","path":"sprites/sprCactus01/sprCactus01.yy",},"order":4,},
+    {"id":{"name":"oView","path":"objects/oView/oView.yy",},"order":58,},
     {"id":{"name":"sprSunset","path":"sprites/sprSunset/sprSunset.yy",},"order":65,},
     {"id":{"name":"oBeachPalm","path":"objects/oBeachPalm/oBeachPalm.yy",},"order":5,},
     {"id":{"name":"sprBeachPalm02","path":"sprites/sprBeachPalm02/sprBeachPalm02.yy",},"order":2,},

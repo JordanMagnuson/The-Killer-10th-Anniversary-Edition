@@ -3,4 +3,5 @@ y = room_height/2;
 
 fallSpeed = .5;
 
-//Port Todo: Set New View
+instance_create_depth(0,0,0, oView);
+oView.View(self, [0,0, room_width, 1200], 1);
