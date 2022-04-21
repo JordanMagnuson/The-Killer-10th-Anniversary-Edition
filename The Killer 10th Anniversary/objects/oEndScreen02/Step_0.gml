@@ -1,0 +1,1 @@
+image_alpha = 1 - (alarm_get(0) /  (FADE_IN_DURATION * room_speed));
