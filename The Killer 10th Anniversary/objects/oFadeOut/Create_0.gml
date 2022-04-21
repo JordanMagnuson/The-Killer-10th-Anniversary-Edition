@@ -10,7 +10,7 @@ function FadeOut(goto, color = BLACK, time = 3, buffer = 0){
 	_buffer = buffer;
 	
 	//create a rectangle the size of the screen
-	draw_rectangle(0, 0, room_width, room_height, _color);
+	//done in draw steps
 	depth = -1000;
 	image_alpha = 0;
 	

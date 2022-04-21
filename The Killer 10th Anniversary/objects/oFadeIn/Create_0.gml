@@ -9,7 +9,7 @@ function FadeIn(color = BLACK, time = 3, buffer = 0){
 	_time = time;
 	
 	//create a rectangle the size of the screen
-	draw_rectangle(0, 0, room_width, room_height, _color);
+	//done in draw step
 	depth = -1000;
 	
 	//start the buffer alarm

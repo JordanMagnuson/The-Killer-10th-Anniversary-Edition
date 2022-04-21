@@ -189,6 +189,7 @@
     {"id":{"name":"sprKillerWalkingSheet","path":"sprites/sprKillerWalkingSheet/sprKillerWalkingSheet.yy",},"order":28,},
     {"id":{"name":"oVictimStillRun","path":"objects/oVictimStillRun/oVictimStillRun.yy",},"order":34,},
     {"id":{"name":"sprSnowMan","path":"sprites/sprSnowMan/sprSnowMan.yy",},"order":8,},
+    {"id":{"name":"oAmbientSelectorButton","path":"objects/oAmbientSelectorButton/oAmbientSelectorButton.yy",},"order":50,},
     {"id":{"name":"sndIceCreaking","path":"sounds/sndIceCreaking/sndIceCreaking.yy",},"order":10,},
     {"id":{"name":"oRiver","path":"objects/oRiver/oRiver.yy",},"order":4,},
     {"id":{"name":"oItem","path":"objects/oItem/oItem.yy",},"order":4,},
