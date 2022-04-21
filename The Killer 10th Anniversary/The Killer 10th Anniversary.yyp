@@ -114,6 +114,7 @@
     {"id":{"name":"oDay","path":"objects/oDay/oDay.yy",},"order":11,},
     {"id":{"name":"sprWaterCover","path":"sprites/sprWaterCover/sprWaterCover.yy",},"order":12,},
     {"id":{"name":"sprVictimDead","path":"sprites/sprVictimDead/sprVictimDead.yy",},"order":40,},
+    {"id":{"name":"oMusicSelectorButton","path":"objects/oMusicSelectorButton/oMusicSelectorButton.yy",},"order":57,},
     {"id":{"name":"sprKillerNoGun","path":"sprites/sprKillerNoGun/sprKillerNoGun.yy",},"order":27,},
     {"id":{"name":"sprGravestoneBeach","path":"sprites/sprGravestoneBeach/sprGravestoneBeach.yy",},"order":0,},
     {"id":{"name":"oCloud","path":"objects/oCloud/oCloud.yy",},"order":10,},
