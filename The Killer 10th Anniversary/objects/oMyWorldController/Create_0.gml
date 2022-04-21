@@ -116,7 +116,7 @@ function explode(){
 	audio_stop_sound(music);
 	global.playSounds = false;
 	alarm[4] = 6 * room_speed; 
-	//global.deadUnderground = instance_create_depth(0,0,0, oDeadUnderground);
+	global.deadUnderground = instance_create_depth(0,0,0, oDeadUnderground);
 }
 
 function startFallingCamera(){

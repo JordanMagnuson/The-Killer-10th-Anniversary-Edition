@@ -126,6 +126,7 @@
     {"id":{"name":"oEndScreen01Mercy","path":"objects/oEndScreen01Mercy/oEndScreen01Mercy.yy",},"order":53,},
     {"id":{"name":"sprBarrenTree02","path":"sprites/sprBarrenTree02/sprBarrenTree02.yy",},"order":1,},
     {"id":{"name":"sprGroundSnow","path":"sprites/sprGroundSnow/sprGroundSnow.yy",},"order":4,},
+    {"id":{"name":"oDeadUnderground","path":"objects/oDeadUnderground/oDeadUnderground.yy",},"order":56,},
     {"id":{"name":"oEndScreen02","path":"objects/oEndScreen02/oEndScreen02.yy",},"order":48,},
     {"id":{"name":"oTimeCounter","path":"objects/oTimeCounter/oTimeCounter.yy",},"order":2,},
     {"id":{"name":"oGun","path":"objects/oGun/oGun.yy",},"order":37,},

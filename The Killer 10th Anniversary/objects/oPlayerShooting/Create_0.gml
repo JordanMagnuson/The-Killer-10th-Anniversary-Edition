@@ -43,7 +43,7 @@ function fadeMusicIn()
 function killVictim()
 {
 	global.deadVictim = instance_create_depth(x, y, depth, oDeadVictim);
-	//global.deadUnderground = instance_create_depth(x, y, depth, oDeadUnderground);
+	global.deadUnderground = instance_create_depth(x, y, depth, oDeadUnderground);
 	global.deadVictim.x = global.victim.x;
 	global.deadVictim.y = global.victim.y;
 	instance_destroy(global.victim);
