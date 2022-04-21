@@ -42,24 +42,19 @@ function fadeMusicIn()
 
 function killVictim()
 {
-	//Needs deadVictim and deadUnderground objects ported
-	/*
 	global.deadVictim = instance_create_depth(x, y, depth, oDeadVictim);
-	global.deadUnderground = instance_create_depth(x, y, depth, oDeadUnderground);
+	//global.deadUnderground = instance_create_depth(x, y, depth, oDeadUnderground);
 	global.deadVictim.x = global.victim.x;
 	global.deadVictim.y = global.victim.y;
 	instance_destroy(global.victim);
-	*/
 }
 
 function startFallingCamera()
 {
-	//Needs falling Camera Guide implemented
-	//instance_create_depth(x, y, depth, oFallingCameraGuide);
+	instance_create_depth(x, y, depth, oFallingCameraGuide);
 }
 
 function gameOver()
 {
-	//Need rmGameOver
-	//room_goto_next();
+	room_goto_next();
 }

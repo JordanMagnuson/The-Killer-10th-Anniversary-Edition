@@ -154,6 +154,7 @@
     {"id":{"name":"sprPyramids","path":"sprites/sprPyramids/sprPyramids.yy",},"order":11,},
     {"id":{"name":"oFrozenRiver","path":"objects/oFrozenRiver/oFrozenRiver.yy",},"order":1,},
     {"id":{"name":"sprSnowPile01","path":"sprites/sprSnowPile01/sprSnowPile01.yy",},"order":9,},
+    {"id":{"name":"oDeadVictim","path":"objects/oDeadVictim/oDeadVictim.yy",},"order":55,},
     {"id":{"name":"sprSky","path":"sprites/sprSky/sprSky.yy",},"order":36,},
     {"id":{"name":"sprMountainBeach01","path":"sprites/sprMountainBeach01/sprMountainBeach01.yy",},"order":9,},
     {"id":{"name":"sprMountainForest01","path":"sprites/sprMountainForest01/sprMountainForest01.yy",},"order":4,},

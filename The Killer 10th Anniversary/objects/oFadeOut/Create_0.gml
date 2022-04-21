@@ -28,5 +28,5 @@ function startBuffer(){
 }
 
 function switchWorlds(){
-//	room_goto(rm_gameOver); //IMPLEMENT RM_GAMEOVER THEN UNCOMMENT	
+	room_goto(rmGameOver);
 }
