@@ -44,6 +44,7 @@
     {"id":{"name":"sndLittleParrot","path":"sounds/sndLittleParrot/sndLittleParrot.yy",},"order":17,},
     {"id":{"name":"sndWavesAmbient","path":"sounds/sndWavesAmbient/sndWavesAmbient.yy",},"order":27,},
     {"id":{"name":"oMountainController","path":"objects/oMountainController/oMountainController.yy",},"order":18,},
+    {"id":{"name":"oFallingCameraGuide","path":"objects/oFallingCameraGuide/oFallingCameraGuide.yy",},"order":54,},
     {"id":{"name":"sndWind","path":"sounds/sndWind/sndWind.yy",},"order":31,},
     {"id":{"name":"oTree","path":"objects/oTree/oTree.yy",},"order":3,},
     {"id":{"name":"oBarrenTree","path":"objects/oBarrenTree/oBarrenTree.yy",},"order":0,},

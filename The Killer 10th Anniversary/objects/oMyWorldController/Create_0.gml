@@ -120,7 +120,7 @@ function explode(){
 }
 
 function startFallingCamera(){
-	//instance_create_depth(0,0,0, oFallingCamera);	
+	instance_create_depth(0,0,0, oFallingCameraGuide);
 }
 
 function fadeMusicIn(duration = 10){
