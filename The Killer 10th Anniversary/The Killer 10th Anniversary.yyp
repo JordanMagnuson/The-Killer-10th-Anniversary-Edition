@@ -157,6 +157,7 @@
     {"id":{"name":"sprPyramids","path":"sprites/sprPyramids/sprPyramids.yy",},"order":11,},
     {"id":{"name":"oFrozenRiver","path":"objects/oFrozenRiver/oFrozenRiver.yy",},"order":1,},
     {"id":{"name":"sprSnowPile01","path":"sprites/sprSnowPile01/sprSnowPile01.yy",},"order":9,},
+    {"id":{"name":"rmMusicChoice","path":"rooms/rmMusicChoice/rmMusicChoice.yy",},"order":4,},
     {"id":{"name":"oDeadVictim","path":"objects/oDeadVictim/oDeadVictim.yy",},"order":55,},
     {"id":{"name":"sprSky","path":"sprites/sprSky/sprSky.yy",},"order":36,},
     {"id":{"name":"sprMountainBeach01","path":"sprites/sprMountainBeach01/sprMountainBeach01.yy",},"order":9,},
@@ -183,6 +184,7 @@
     {"id":{"name":"sndMeadowAmbience","path":"sounds/sndMeadowAmbience/sndMeadowAmbience.yy",},"order":19,},
     {"id":{"name":"sprEndScreen02","path":"sprites/sprEndScreen02/sprEndScreen02.yy",},"order":19,},
     {"id":{"name":"sprNightCover","path":"sprites/sprNightCover/sprNightCover.yy",},"order":31,},
+    {"id":{"name":"oMusicChoiceController","path":"objects/oMusicChoiceController/oMusicChoiceController.yy",},"order":59,},
     {"id":{"name":"sprMountainSnow01","path":"sprites/sprMountainSnow01/sprMountainSnow01.yy",},"order":6,},
     {"id":{"name":"sndGulls03","path":"sounds/sndGulls03/sndGulls03.yy",},"order":8,},
     {"id":{"name":"sprCloud06","path":"sprites/sprCloud06/sprCloud06.yy",},"order":12,},
@@ -277,6 +279,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rmTitleScreen","path":"rooms/rmTitleScreen/rmTitleScreen.yy",},},
+    {"roomId":{"name":"rmMusicChoice","path":"rooms/rmMusicChoice/rmMusicChoice.yy",},},
     {"roomId":{"name":"rmMyWorld","path":"rooms/rmMyWorld/rmMyWorld.yy",},},
     {"roomId":{"name":"rmGameOver","path":"rooms/rmGameOver/rmGameOver.yy",},},
   ],

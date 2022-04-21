@@ -15,8 +15,9 @@ if(X){
 	if(!global.startedWalking){
 		global.timeCounter.started = true;
 		if(global.MUSIC_WHILE_WALKING){
-			oSoundController.fadeout(5); 
-			//(FP.world as MyWorld).music.loop();	//NOT SURE WHAT THIS DOES
+			//oSoundController.fadeout(5); NOT SURE WHAT THIS IS SUPPOSED TO DO
+			oMyWorldController.playMusicFromPlayer();
+			
 		}
 		standingPush();
 		global.startedWalking = true;

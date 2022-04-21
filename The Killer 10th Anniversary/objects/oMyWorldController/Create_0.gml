@@ -109,10 +109,6 @@ function explode(){
 	instance_create_depth(0,0,0, oExplodedVictim);
 	oExplodedVictim.ExplodedVictim(victimx, victimy);
 	
-	
-	
-	
-	
 	audio_stop_sound(music);
 	global.playSounds = false;
 	alarm[4] = 6 * room_speed; 
@@ -317,4 +313,9 @@ function showTextPress(){
 
 function showTitle(){
 	instance_create_depth(0,0,0, oTextJordan);	
+}
+
+function playMusicFromPlayer(){
+	audio_play_sound_on(musicEmit, music, false, 100);
+	musicStarted = true;	
 }

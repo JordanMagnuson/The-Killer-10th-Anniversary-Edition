@@ -28,9 +28,9 @@ vs = surface_height / 32;
 xx = surface_width/2;
 yy = surface_height/4;
 if (global.browser_width_hdpi < 600)
-	var title = "WALK OR DIE";
+	var title = "THE KILLER";
 else
-	var title = "WALK OR DIE";
+	var title = "THE KILLER";
 string_h = global.gui_scale * h1_size * string_height(title);	
 draw_text_transformed(xx, yy, title, h1_size * global.gui_scale, h1_size * global.gui_scale, 0);
 
