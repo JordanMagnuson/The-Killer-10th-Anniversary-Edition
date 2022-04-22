@@ -15,7 +15,7 @@ if(X){
 	if(!global.startedWalking){
 		global.timeCounter.started = true;
 		if(global.MUSIC_WHILE_WALKING){
-			//oSoundController.fadeout(5); NOT SURE WHAT THIS IS SUPPOSED TO DO
+			oSoundController.fadeOut(5);
 			oMyWorldController.playMusicFromPlayer();
 			
 		}
@@ -74,7 +74,7 @@ if(keyboard_check_released(vk_space)){
 		global.playerShooting.y = y;
 		
 		if(global.MUSIC_WHILE_WALKING){
-			//(FP.world as MyWorld).music.stop(); //NOT SURE WHAT THIS LINE DOES
+			oMyWorldController.stopMusicFromPlayer();
 			global.playSounds = true;
 		}
 		global.fadeSounds = false;

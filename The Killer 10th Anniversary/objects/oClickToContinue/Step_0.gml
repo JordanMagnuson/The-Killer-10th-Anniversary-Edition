@@ -19,7 +19,6 @@ if(mouse_check_button_released(mb_any)){
 			instance_destroy(self);
 			break;
 		case 1:
-			//global.server.sendData(); UNSURE HOW TO CONVERT
 			instance_create_depth(0,0,0, oFadeIn);
 			instance_create_depth(0,0,0,oEndScreen03);
 			instance_destroy(self);

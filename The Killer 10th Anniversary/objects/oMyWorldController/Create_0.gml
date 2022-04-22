@@ -122,7 +122,7 @@ function startFallingCamera(){
 function fadeMusicIn(duration = 10){
 	show_debug_message("Music fading in");
 	musicStarted = true;
-	oSoundController.fadeout(duration);
+	oSoundController.fadeOut(duration);
 	global.playSounds = false;
 	global.fadeSounds = true;
 	//music.loop(0); AGAIN, NOT SURE HOW TO CONVERT THIS
@@ -318,4 +318,7 @@ function showTitle(){
 function playMusicFromPlayer(){
 	audio_play_sound_on(musicEmit, music, false, 100);
 	musicStarted = true;	
+}
+function stopMusicFromPlayer(){
+	audio_stop_sound(music);
 }

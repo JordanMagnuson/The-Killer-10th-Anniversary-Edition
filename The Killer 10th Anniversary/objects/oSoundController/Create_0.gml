@@ -25,12 +25,13 @@ function soundController(location){
 	
 }
 
-function fadeOut(){
+function fadeOut(duration = 15){
 	if(inProcess)
 		return;
 	global.fadeSounds = true;
 	global.playSounds = false;
 	alarm[0] = duration; //when the fading is complete, call fadeComplete();
+	self.duration = duration;
 	fadingOut = true;
 }
 
