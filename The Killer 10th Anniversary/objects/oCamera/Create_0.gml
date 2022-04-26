@@ -77,8 +77,14 @@ target_view = 0;
 view_set_visible(target_view, true);
 
 // Set default width and height for our view.
-view_width_default = 300;
-view_height_default = 200;
+if(room == rmMusicChoice){
+	view_width_default = 600;
+	view_height_default = 400;
+}
+else{
+	view_width_default = 300;
+	view_height_default = 200;	
+}
 aspect_default = view_width_default / view_height_default;
 view_width = view_width_default;
 view_height = view_height_default;
