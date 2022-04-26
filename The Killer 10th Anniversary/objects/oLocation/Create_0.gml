@@ -5,11 +5,11 @@ creationTimeDecreaseRate = 0;
 creationTimeIncreaseRate = 0;
 
 // Initialize possible sound emitters for location item sounds. These are set, if needed, by individual locations (e.g. oBeach, oForest.)
-sEmit0 = 0;
-sEmit1 = 0;
-sEmit2 = 0;
-sEmit3 = 0;
-sEmit4 = 0;
+sEmit0 = -1;
+sEmit1 = -1;
+sEmit2 = -1;
+sEmit3 = -1;
+sEmit4 = -1;
 
 // Default ambient sound to silence.
 DAY_SOUND = "sndSilence";
