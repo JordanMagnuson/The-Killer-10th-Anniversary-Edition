@@ -16,7 +16,7 @@ function createItemHere(){
 	creationNumber = random(1);
 	
 	//Mid distance
-	if(random(1) > 0.2){
+	if(random(1) > 0.2 and oPlayer.walking){
 		/*if(creationNumber < 0.005 && global.oGiantPineSeen == false){
 			instance_create_depth(room_width+10, 175,0, oGiantPine);
 			global.oGiantPineSeen = true;

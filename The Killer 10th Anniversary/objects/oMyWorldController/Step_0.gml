@@ -68,10 +68,10 @@ else if (oPlayer.walking && global.locationChanges == 2 && global.timeCounter.ti
 	changeLocation();
 }
 
-if(fadeSounds and audio_emitter_get_gain(musicEmit) < 1){
+if(global.fadeSounds and audio_emitter_get_gain(musicEmit) < 1){
 	audio_emitter_gain(musicEmit, audio_emitter_get_gain(musicEmit) + (1/duration)/room_speed)	
 	duration -= (1/duration)/room_speed;
 }
-else if(fadeSounds and audio_emitter_get_gain(musicEmit) >= 1){
+else if(global.fadeSounds and audio_emitter_get_gain(musicEmit) >= 1){
 	musicFaderComplete();	
 }

@@ -15,7 +15,7 @@ function createItemHere()
 	oLocation.createItem();
 	creationNumber = random(1);
 		
-	if (random(1) > 0.25) {		
+	if (random(1) > 0.25 and oPlayer.walking) {		
 		/*if (creationNumber < 0.005 && global.oFlowerTreeSeen == false){
 			instance_create_depth(room_width+10, 175, 0, oFlowerTree);
 			global.oFlowerTreeSeen = true;
