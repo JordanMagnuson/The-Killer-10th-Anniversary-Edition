@@ -67,3 +67,10 @@ else if (oPlayer.walking && global.locationChanges == 2 && global.timeCounter.ti
 	show_debug_message("Exceeded time in beach - change out")	
 	changeLocation();
 }
+
+if(fadeSounds and audio_emitter_get_gain(musicEmit) < 1){
+	audio_emitter_gain(musicEmit, audio_emitter_get_gain(musicEmit) + (1/duration)/room_speed)	
+}
+else if(fadeSounds and audio_emitter_get_gain(musicEmit) >= 1){
+	musicFaderComplete();	
+}

@@ -16,6 +16,7 @@ musicEnd = sndJonsiTornadoEnd;
 musicStarted = false;
 musicEmit = audio_emitter_create();
 explosionEmitter = audio_emitter_create();
+duration = 0;
 
 room_height = 200
 room_width = 300;
@@ -125,8 +126,9 @@ function fadeMusicIn(duration = 10){
 	oSoundController.fadeOut(duration);
 	global.playSounds = false;
 	global.fadeSounds = true;
-	//music.loop(0); AGAIN, NOT SURE HOW TO CONVERT THIS
-	//musicFader.fadeTo(1, duration); OR THIS 
+	
+	audio_play_sound_on(musicEmit, music, false, 100);
+	self.duration = duration;
 }
 
 function musicFaderComplete(){
