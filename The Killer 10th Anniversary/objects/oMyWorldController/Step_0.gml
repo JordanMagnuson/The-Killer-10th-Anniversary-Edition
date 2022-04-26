@@ -25,9 +25,9 @@ if(keyboard_check_pressed(vk_f5) && !musicStarted){
 	global.playSounds = false;
 	global.fadeSounds = true;
 	musicStarted = true;
-	//soundController.fadeOut(); //ADD THIS LINE WHEN THE SOUND CONTROLLER IS CREATED
-	//music.loop(0) I'M NOT SURE HOW TO CONVERT THIS
-	//musicFader.fadeTo(1, Global.MUSIC_IN_DURATION); I'M NOT SURE HOW TO CONVERT THIS
+	soundController.fadeOut(); 
+	audio_play_sound_on(musicEmit, music, true, 100);
+
 }
 
 // Flip oddFrame every frame
@@ -70,6 +70,7 @@ else if (oPlayer.walking && global.locationChanges == 2 && global.timeCounter.ti
 
 if(fadeSounds and audio_emitter_get_gain(musicEmit) < 1){
 	audio_emitter_gain(musicEmit, audio_emitter_get_gain(musicEmit) + (1/duration)/room_speed)	
+	duration -= (1/duration)/room_speed;
 }
 else if(fadeSounds and audio_emitter_get_gain(musicEmit) >= 1){
 	musicFaderComplete();	

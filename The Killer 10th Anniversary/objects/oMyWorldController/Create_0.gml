@@ -127,7 +127,7 @@ function fadeMusicIn(duration = 10){
 	global.playSounds = false;
 	global.fadeSounds = true;
 	
-	audio_play_sound_on(musicEmit, music, false, 100);
+	audio_play_sound_on(musicEmit, music, true, 100);
 	self.duration = duration;
 }
 
@@ -139,7 +139,8 @@ function musicFaderComplete(){
 function fadeAllItemsAfterExplosion(){
 	audio_play_sound_on(musicEmit, music, false, 100);
 	musicStarted = true;
-	//musicFade.fadeTo(1,10); // NOT SURE HOW TO CONVERT
+	global.fadeSounds = true;
+	self.duration = 10;
 	alarm[5] = 13* room_speed;
 	/*	oItem NOT YET CREATED
 	for (var i = 0; i < instance_number(oItem); ++i;){
@@ -318,7 +319,7 @@ function showTitle(){
 }
 
 function playMusicFromPlayer(){
-	audio_play_sound_on(musicEmit, music, false, 100);
+	audio_play_sound_on(musicEmit, music, true, 100);
 	musicStarted = true;	
 }
 function stopMusicFromPlayer(){
