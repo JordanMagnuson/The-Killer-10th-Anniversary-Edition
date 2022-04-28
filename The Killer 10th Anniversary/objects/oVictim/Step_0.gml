@@ -1,3 +1,6 @@
+if(fading)
+	image_alpha = alarm_get(5)/(FADE_OUT_DURATION * room_speed);
+
 if(sprite_index == sprVictim and image_index >= 9)
 {
 	stumbling = false;

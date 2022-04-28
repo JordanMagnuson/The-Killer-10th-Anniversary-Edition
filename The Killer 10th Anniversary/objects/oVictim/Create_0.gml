@@ -89,17 +89,10 @@ function waitToFade()
 	alarm_set(4, global.victimStillRun.DISPLAY_EACH_DURATION * room_speed);
 }
 
-
-//PORT TODO: Implement Fade Out
-
 function fadeOut()
 {
-	/*
-	fadeTween = new ColorTween(destroy);
-	addTween(fadeTween);		
-	fadeTween.tween(FADE_OUT_DURATION, Colors.WHITE, Colors.WHITE, 1, 0);	
+	alarm_set(5, FADE_OUT_DURATION * room_speed);
 	fading = true;
-	*/
 }
 
 
