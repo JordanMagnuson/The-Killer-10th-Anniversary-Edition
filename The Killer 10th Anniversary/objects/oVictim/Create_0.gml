@@ -32,7 +32,10 @@ function kneel()
 
 function stop()
 {
-	// TODO: Stop Walking Sound
+	if(audio_is_playing(sndWalking))
+	{
+		audio_stop_sound(sndWalking);
+	}
 	walking = false;
 	
 	//kill stopping alarm
@@ -80,7 +83,7 @@ function stumble()
 	stumbling = true;
 			
 	var vol = 0.5 + 0.5 * random(1);
-	//TODO: Play Walking Sound
+	audio_play_sound(sndWalking, 999, true); 
 }
 
 function waitToFade()

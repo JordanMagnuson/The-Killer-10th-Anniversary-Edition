@@ -18,10 +18,9 @@ function makeVictimKneel()
 function makeVictimRun()
 {
 	global.victimStillRun = instance_create_depth(x, y, depth, oVictimStillRunController);
-	//PORT TODO: implement victim.fadeout()
-	//global.victim.fadeOut();
-	
-	//PORT TODO: Play oMyWorldController.music
+	global.victim.fadeOut();
+
+	oMyWorldController.playMusicFromPlayer();
 	fadeItems();
 }
 
