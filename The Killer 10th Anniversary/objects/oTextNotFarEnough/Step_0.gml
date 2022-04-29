@@ -11,6 +11,9 @@ if(fadein){
 		fadein = false;	
 	}
 }
+else if(alarm[0] < 0){
+	alarm[0] = 2 * room_speed; //this line makes the text fade from the screen after the player begins walking again
+}	
 
 if(fade){
 	if(alpha <= 0){
