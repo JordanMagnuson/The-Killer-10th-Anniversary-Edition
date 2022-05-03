@@ -2,6 +2,8 @@ if(fadein == true)
 {
 	if(global.shotFired)
 	{
+		fadein = false;
+		fade = true;
 		return;
 	}
 	alpha += (1/FADE_IN_DURATION)/room_speed;

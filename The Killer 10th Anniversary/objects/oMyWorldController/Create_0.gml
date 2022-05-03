@@ -183,6 +183,11 @@ function fadeItem(){ //THIS MAY NOT WORK
 }
 
 function changeLocation(location = ""){
+	
+	if(instance_exists(oPlayerShooting)){ //if the oPlayerShooting instance exists, DO NOT CHANGE LOCATION
+		return;		
+	}
+	
 	show_debug_message("Change Location");
 	show_debug_message("Location changes: " + string(global.locationChanges));
 	show_debug_message("time since last location: " + string(oTimeCounter.timePassedSinceLastLocationChange));
@@ -233,13 +238,15 @@ function changeLocation(location = ""){
 	show_debug_message(self.location)
 	oLocation.Location();    
 	
-
+/*
 	//destroys old ground when change location is spammed
 	if(variable_instance_exists(oMyWorldController, "oldGround")){ 
 		if(instance_exists(oldGround)){
 			instance_destroy(oldGround);
 		}
 	}
+	
+*/
 	oldGround = ground;
 	ground = instance_create_depth(room_width, oGround.y, 12, oGround);	
 	

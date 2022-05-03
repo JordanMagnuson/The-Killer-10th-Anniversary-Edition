@@ -1,4 +1,5 @@
-image_angle = point_direction(x, y, mouse_x, mouse_y);
+if(!global.shotFired)
+	image_angle = point_direction(x, y, mouse_x, mouse_y);
 
 //moved gun placement code from create to step to prevent crash
 if(global.playerShooting and x == 0)

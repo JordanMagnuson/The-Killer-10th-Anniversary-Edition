@@ -20,6 +20,8 @@ function makeVictimRun()
 	global.victimStillRun = instance_create_depth(x, y, depth, oVictimStillRunController);
 	global.victim.fadeOut();
 
+	alarm[3] = 17 * room_speed; //start falling camera alarm
+	instance_create_depth(0,0,0, oDeadUnderground);
 	oMyWorldController.playMusicFromPlayer();
 	fadeItems();
 }
