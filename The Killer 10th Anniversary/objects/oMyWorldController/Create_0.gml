@@ -12,7 +12,7 @@ nextLocation = "";
 time = "";
 
 music = sndMusicJonsiTornado;
-musicEnd = sndJonsiTornadoEnd;
+musicEnding = sndJonsiTornadoEnd;
 musicStarted = false;
 musicEmit = audio_emitter_create();
 explosionEmitter = audio_emitter_create();
@@ -324,4 +324,9 @@ function playMusicFromPlayer(){
 }
 function stopMusicFromPlayer(){
 	audio_stop_sound(music);
+}
+
+function musicEnd(){
+	audio_play_sound_on(musicEmit, musicEnding, true, 100);
+	musicStarted = true;	
 }

@@ -19,7 +19,7 @@ if(mouse_check_button(mb_left) and !global.shotFired)
 		alarm_set(2, 1);
 	}
 	
-	//FP.rate = .04			Not sure how to convert this
+	global.rate = 0.4;
 	instance_destroy(global.crossHair);
 	
 }

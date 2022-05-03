@@ -31,7 +31,7 @@ function fadeItems()
 
 function playMusic()
 {
-	//PORT TODO: play oMyWorldController.musicEnd
+	oMyWorldController.musicEnd();
 }
 
 function fadeMusicIn()
