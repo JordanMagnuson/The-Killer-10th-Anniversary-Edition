@@ -41,7 +41,7 @@ global.reachedPlains = false;
 global.numberOfStops = 0;
 global.locationChanges = 0;
 global.rate = 1;
-
+rate = global.rate;
 global.endScreen = 0;
 
 
