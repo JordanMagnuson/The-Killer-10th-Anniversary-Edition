@@ -2,7 +2,7 @@ shouldFadeIn = true;
 FADE_IN_DURATION = 2;
 FADE_OUT_DURATION = 2;
 
-displayTime = .5;
+displayTime = 0.5;
 
 image_speed = 0;
 alpha = 1;
@@ -16,7 +16,7 @@ function added()
 {
 	if(shouldFadeIn)
 	{
-		fadeIn()
+		fadeIn();
 	}
 	else
 	{

@@ -1,4 +1,5 @@
-DISPLAY_EACH_DURATION = .5;
+
+DISPLAY_EACH_DURATION = 0.5;
 TIME_BETWEEN_EACH = 3;
 DISTANCE_BETWEEN_EACH = 45;
 
@@ -18,7 +19,7 @@ function showNext()
 	imageIndex += 1;
 	if(imageIndex == 4)
 		imageIndex = 0;
-		
+	
 	var v = instance_create_depth(x, y, depth, oVictimStillRun);
 	v.displayTime = DISPLAY_EACH_DURATION;
 	v.image_index = imageIndex;

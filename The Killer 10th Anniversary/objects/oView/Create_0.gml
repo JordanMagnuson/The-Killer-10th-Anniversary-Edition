@@ -3,8 +3,8 @@ _within = "";
 _speed = "";
 
 function View(toFollow, within = "", mySpeed = 1){
-	x = oCamera.x;
-	y = oCamera.y;
+	x = 0;
+	y = 0;
 
 	setView(toFollow, within, mySpeed);
 }
@@ -15,3 +15,4 @@ function setView(toFollow, within, mySpeed = 1){
 	_speed = mySpeed;
 }	
 
+counter = 0;

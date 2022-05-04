@@ -18,8 +18,9 @@ musicEmit = audio_emitter_create();
 explosionEmitter = audio_emitter_create();
 duration = 0;
 
-room_height = 200
+
 room_width = 300;
+room_height = 200;
 room_speed = 30;
 
 currentLocation = instance_create_depth(0, 0, 0, oJungle);

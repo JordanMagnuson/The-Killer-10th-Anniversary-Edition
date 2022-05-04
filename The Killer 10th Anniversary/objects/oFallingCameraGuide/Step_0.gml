@@ -1,4 +1,4 @@
-y += fallSpeed * (delta_time/1000000);
+y += fallSpeed * global.rate;
 
 if(y > 1175)
 {

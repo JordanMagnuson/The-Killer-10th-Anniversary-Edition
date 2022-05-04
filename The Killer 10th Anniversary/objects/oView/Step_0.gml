@@ -1,10 +1,14 @@
-dist = point_distance(_toFollow.x - room_width/2, _toFollow.y - 68 - room_height, oCamera.x, oCamera.y);
+dist = point_distance(_toFollow.x, _toFollow.y - room_height/2, x, y);
 spd = dist/_speed;
+if(dist > 5){
+	move_towards_point(_toFollow.x, _toFollow.y - room_height/2, spd);
+}
+else{
+	speed = 0;
+}
 
-move_towards_point(_toFollow.x, _toFollow.y, spd);
-
-oCamera.x = x;
-oCamera.y = y;
+//oCamera.x = x;
+//oCamera.y = y;
 
 /*
 within[0] = x;
@@ -12,18 +16,27 @@ within[1] = y;
 within[2] = width;
 within[3] = height;
 */
-
+/*
 //stay within constraints
+//THESE CONSTRAINTS ARE MAKING THE Y VALUE JUMP BACK TO 0 WHICH CAUSES THE SCREEN TO FLASH
 if(_within != ""){
-	if( oCamera.x < _within[0])
-		oCamera.x = _within[0];	
+	if( x < _within[0])
+		x = _within[0];	
 		
-	if(oCamera.y < _within[1])
-		oCamera.y = _within[1];
+	if(y < _within[1])
+		y = _within[1];
 	
-	if(oCamera.x + room_width > _within[0] + _within[2])
-		oCamera.x = _within[0] + _within[2] - room_width;
+	if(x + room_width > _within[0] + _within[2])
+		x = _within[0] + _within[2] - room_width;
 		
-	if(oCamera.y + room_height > _within[0] + _within[3])
-		oCamera.y = _within[1] + _within[3] - room_height;
+	if(y + room_height > _within[0] + _within[3])
+		y = _within[1] + _within[3] - room_height;
+}
+*/
+camera_set_view_pos(view_camera[0], 0, y);
+counter ++;
+if(counter == 60){
+	show_debug_message("x: " + string(x) + "   Y: " + string(y));
+	show_debug_message("toFollow.y: " + string(_toFollow.y) + "my y: " + string(y));
+	counter = 0;
 }

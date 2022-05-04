@@ -1,6 +1,6 @@
 x = 0;
-y = oGround.y;
-layer = -999;
+y = 175;
+depth = -999;
 
 switch(oMyWorldController.location)
 {
