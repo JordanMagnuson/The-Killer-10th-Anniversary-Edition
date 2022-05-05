@@ -67,7 +67,8 @@ else
 	if(oPlayer.walking)
 	{
 		if(oMyWorldController.oddFrame == 1)
-			x -= .5;
+			x -= 1; //changed from .5 to 1 in order to correct graphical bug
+			
 		//If not already set, set walking alarm
 		if(alarm_get(0) <= 0 and (x - global.player.x <= 30))
 		{
