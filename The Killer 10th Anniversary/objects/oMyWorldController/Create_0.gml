@@ -137,28 +137,24 @@ function musicFaderComplete(){
 	global.fadeSounds = false;
 }
 
-function fadeAllItemsAfterExplosion(){
-	audio_play_sound_on(musicEmit, music, false, 100);
-	musicStarted = true;
-	global.fadeSounds = true;
-	self.duration = 10;
-	alarm[5] = 13* room_speed;
-	/*	oItem NOT YET CREATED
-	for (var i = 0; i < instance_number(oItem); ++i;){
-		if(instance_find(oItem, i).type != cloud){
-			instance_find(oItem,i).fadeOutImage(10);
-		}
-	}
-	*/
-}
-
-function fadeAllItemsGeneric(duration = 10){//THIS MAY NOT WORK
+function fadeAllItemsGeneric(duration = 10){
 	for (var i = 0; i < instance_number(oItem); ++i;){
 		if(instance_find(oItem, i).type != "cloud"){
 			instance_find(oItem,i).fadeOutImage(duration);
 		}
 	}
 }
+
+function fadeAllItemsAfterExplosion(){
+	audio_play_sound_on(musicEmit, music, false, 100);
+	musicStarted = true;
+	global.fadeSounds = true;
+	self.duration = 10;
+	alarm[5] = 13* room_speed;
+	fadeAllItemsGeneric();
+}
+
+
 
 function fadeItem(){ //THIS MAY NOT WORK
 	show_debug_message("Fade item");

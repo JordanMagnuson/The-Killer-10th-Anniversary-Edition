@@ -1,7 +1,7 @@
-dist = point_distance(_toFollow.x, _toFollow.y - room_height/2, x, y);
+dist = point_distance(_toFollow.x, _toFollow.y + 68 - room_height/2, x, y);
 spd = dist/_speed;
 if(dist > 5){
-	move_towards_point(_toFollow.x, _toFollow.y - room_height/2, spd);
+	move_towards_point(_toFollow.x, _toFollow.y + 68 - room_height/2, spd);
 }
 else{
 	speed = 0;
@@ -37,6 +37,6 @@ camera_set_view_pos(view_camera[0], 0, y);
 counter ++;
 if(counter == 60){
 	show_debug_message("x: " + string(x) + "   Y: " + string(y));
-	show_debug_message("toFollow.y: " + string(_toFollow.y) + "my y: " + string(y));
+	show_debug_message("toFollow.y: " + string(_toFollow.y) + "my y: " + string(y) + "   spd: " + string(spd));
 	counter = 0;
 }

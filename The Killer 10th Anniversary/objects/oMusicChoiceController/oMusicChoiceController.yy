@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprMusicChoiceScreen",
+    "path": "sprites/sprMusicChoiceScreen/sprMusicChoiceScreen.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -1,0 +1,1 @@
+draw_sprite_ext(sprEndScreen02, -1, 0,0,0.5,0.5,0,c_white, 1);

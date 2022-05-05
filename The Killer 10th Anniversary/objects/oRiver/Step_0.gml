@@ -25,3 +25,8 @@ if (!behindPlayer and x < oPlayer.x) {
 	behindPlayer = true;
 }
 //---------------------------------------------------------------
+
+if(fading){
+	var gain = audio_emitter_get_gain(sndEmit) - 1/(10*room_speed);
+	audio_emitter_gain(sndEmit, gain);	
+}
