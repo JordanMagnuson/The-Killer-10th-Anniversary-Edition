@@ -4,13 +4,13 @@ learnMoreCambodiaURL = "http://en.wikipedia.org/wiki/Cambodia";
 leaveCommentURL = "http://www.gametrekking.com/comment/reply/58#comment-form";
 
 if (global.mercifulShot)
-	instance_create_depth(0, 0, depth, oEndScreen01Mercy);
+	instance_create_depth(0, 0, 0, oEndScreen01Mercy);
 else if(global.exploded)
-	instance_create_depth(0, 0, depth, oEndScreen01Explosion);
+	instance_create_depth(0, 0, 0, oEndScreen01Explosion);
 else
-	instance_create_depth(0, 0, depth, oEndScreen01Killer);
+	instance_create_depth(0, 0, 0, oEndScreen01Killer);
 	
-instance_create_depth(0, 0, depth, oFadeIn);
+instance_create_depth(0, 0, 0, oFadeIn);
 oFadeIn.FadeIn(oColors.BLACK, 6);
 
 //---------------------------------------------------------------

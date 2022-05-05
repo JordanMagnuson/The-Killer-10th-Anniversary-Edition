@@ -36,9 +36,10 @@ if(_within != ""){
 }
 */
 camera_set_view_pos(view_camera[0], 0, y);
+/*
 counter ++;
 if(counter == 60){
 	show_debug_message("x: " + string(x) + "   Y: " + string(y));
 	show_debug_message("toFollow.y: " + string(_toFollow.y) + "my y: " + string(y) + "   spd: " + string(spd));
 	counter = 0;
-}
+}*/
