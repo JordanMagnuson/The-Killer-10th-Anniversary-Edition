@@ -1,3 +1,5 @@
+image_speed = animSpeed;
+
 if(fading)
 	image_alpha = alarm_get(5)/(FADE_OUT_DURATION * room_speed);
 
@@ -64,6 +66,7 @@ else
 {
 	setGraphics("stand");
 	image_index = 0;
+	image_speed = 0;
 	if(oPlayer.walking)
 	{
 		if(oMyWorldController.oddFrame == 1)

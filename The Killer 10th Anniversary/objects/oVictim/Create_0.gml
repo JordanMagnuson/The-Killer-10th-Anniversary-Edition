@@ -46,6 +46,7 @@ function slowWalk()
 {
 	if(fastWalking)
 	{
+		animSpeed = DEFAULT_ANIM_SPEED *.8;
 		walking = true;
 		fastWalking = false;
 		
@@ -57,6 +58,7 @@ function slowWalk()
 function fastWalk()
 {
 	//set fastwalk alarm
+	animSpeed = DEFAULT_ANIM_SPEED * 1.2;
 	alarm_set(3, FAST_WALK_TIME * room_speed);
 	walking = false;
 	fastWalking = true;
@@ -67,6 +69,7 @@ function fastWalk()
 
 function runAway()
 {
+	animSpeed = DEFAULT_ANIM_SPEED * 1.4;
 	walking = false;
 	fastWalking = false;
 	runningAway = true;
@@ -77,9 +80,9 @@ function runAway()
 		
 function stumble()
 {
+	animSpeed = DEFAULT_ANIM_SPEED;
 	sprite_index = sprVictim;
 	image_index = 0;
-	image_speed = STUMBLE_TIME * room_speed;
 	stumbling = true;
 			
 	var vol = 0.5 + 0.5 * random(1);
