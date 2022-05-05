@@ -28,5 +28,8 @@ if (!behindPlayer and x < oPlayer.x) {
 
 if(fading){
 	var gain = audio_emitter_get_gain(sndEmit) - 1/(10*room_speed);
+	if(gain <= 0.1){
+		instance_destroy(self);	
+	}
 	audio_emitter_gain(sndEmit, gain);	
 }

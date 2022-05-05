@@ -1,2 +1,2 @@
 /// @description Make Victim Kneel
-makeVictimKneel()
+makeVictimKneel();

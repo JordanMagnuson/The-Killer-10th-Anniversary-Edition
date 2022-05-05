@@ -45,8 +45,8 @@ function killVictim()
 {
 	global.deadVictim = instance_create_depth(x, y, depth, oDeadVictim);
 	global.deadUnderground = instance_create_depth(x, y, depth, oDeadUnderground);
-	global.deadVictim.x = global.victim.x;
-	global.deadVictim.y = global.victim.y;
+	global.deadVictim.x = global.victim.x + 12;//+12 makes up for origin configuration
+	global.deadVictim.y = global.victim.y+ 15;//+15 makes up for origin configuration
 	instance_destroy(global.victim);
 }
 

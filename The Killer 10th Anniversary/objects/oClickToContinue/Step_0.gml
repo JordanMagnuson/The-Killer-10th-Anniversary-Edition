@@ -1,13 +1,13 @@
 if(fadein){
-	if (image_alpha < 1){
-		image_alpha += (1/FADE_IN_DURATION)/room_speed;	
+	if (alpha < 1){
+		alpha += (1/FADE_IN_DURATION)/room_speed;	
 	}
 	else{
 		fadein = false;	
 	}
 }
 
-if(image_alpha >= 0.5){
+if(alpha >= 0.5){
 	window_set_cursor(cr_default); // show mouse cursor
 }
 
