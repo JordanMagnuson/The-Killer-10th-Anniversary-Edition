@@ -30,6 +30,14 @@ if(keyboard_check_pressed(vk_f5) && !musicStarted){
 
 }
 
+// Test slowing down frame rate by holding down F4.
+if (keyboard_check(vk_f4)) {
+	global.rate = 0.4;
+}
+else {
+	global.rate = 1;
+}
+
 // Flip oddFrame every frame
 oddFrame *= -1;
 
