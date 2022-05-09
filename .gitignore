@@ -2,3 +2,10 @@
 /bin/
 /screens/
 /IndieCade 2011 Submission/
+
+# Ignore Windows image file caches.
+Thumbs.db
+ehthumbs.db
+
+# Ignore Window folder config file.
+Desktop.ini
