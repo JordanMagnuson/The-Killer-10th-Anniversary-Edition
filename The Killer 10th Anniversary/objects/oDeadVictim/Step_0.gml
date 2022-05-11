@@ -7,7 +7,7 @@ if( y > 1175)
 }
 
 //Stop animation
-if(image_index >= 3)
+if(image_index >= 4)
 {
 	image_speed = 0;
 }
