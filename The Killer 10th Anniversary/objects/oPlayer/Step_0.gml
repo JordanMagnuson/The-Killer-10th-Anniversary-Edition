@@ -64,8 +64,10 @@ else{
 
 if(keyboard_check_released(vk_space)){
 	if(!global.reachedPlains){
-		instance_create_depth(0, 0, 0, oTextNotFarEnough);
-		global.numberOfStops++;
+		if(!instance_exists(oTextNotFarEnough)){
+			instance_create_depth(0, 0, 0, oTextNotFarEnough);
+			global.numberOfStops++;
+		}
 	}
 	else{
 		instance_create_depth(0, 0, 0, oTextUseMouse);	

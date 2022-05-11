@@ -3,9 +3,10 @@ spd = dist/_speed;
 if(dist > 5){
 	//move_towards_point is creating a super choppy effect, testing fall speed of deadVictim instead
 	//move_towards_point(_toFollow.x, _toFollow.y + 68 - room_height/2, spd);
-	y += 0.5 * global.rate;
+	//y += 0.5 * global.rate;
+	y += 1100/(61.85*room_speed) //slightly too fast
 }
-else{
+else{		
 	speed = 0;
 }
 

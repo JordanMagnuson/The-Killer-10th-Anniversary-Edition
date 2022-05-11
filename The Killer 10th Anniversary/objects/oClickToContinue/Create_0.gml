@@ -7,7 +7,7 @@ sprite_index = sprClickToContinueBlack;
 sprite_set_offset(sprite_index, 0,sprite_height);
 sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, sprite_height, bboxkind_rectangular,0);
 */
-image_alpha = 1;
+image_alpha = 0;
 depth = -2000;
 
 y = room_height/4 + 25;

@@ -40,5 +40,5 @@ function fadeOut(){
 }
 
 function destroy(){
-	instance_destroy(oTextPress);
+	instance_destroy(self);
 }

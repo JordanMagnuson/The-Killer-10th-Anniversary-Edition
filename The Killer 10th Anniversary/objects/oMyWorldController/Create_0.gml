@@ -331,6 +331,6 @@ function stopMusicFromPlayer(){
 }
 
 function musicEnd(){
-	audio_play_sound_on(musicEmit, musicEnding, true, 100);
+	audio_play_sound_on(musicEmit, musicEnding, false, 100);
 	musicStarted = true;	
 }

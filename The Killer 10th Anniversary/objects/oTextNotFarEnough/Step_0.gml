@@ -1,4 +1,4 @@
-if(oPlayer.walking && started == false){
+if(oPlayer.walking && started == false && !fadein){ //this removes the item at the beginning of the game looking at started varuabke
 		started = true;
 		alarm[0] = 2 * room_speed;
 }
@@ -11,7 +11,7 @@ if(fadein){
 		fadein = false;	
 	}
 }
-else if(alarm[0] < 0){
+else if(!fade and oPlayer.walking and alarm[0] == -1){
 	alarm[0] = 2 * room_speed; //this line makes the text fade from the screen after the player begins walking again
 }	
 
