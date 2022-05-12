@@ -10,8 +10,8 @@ sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, spr
 image_alpha = 0;
 depth = -2000;
 
-y = room_height/4 + 25;
-x = room_width/4;
+y = room_height/5 + 25;
+x = room_width/5;
 image_xscale = .5;
 image_yscale = .5;
 
