@@ -22,5 +22,4 @@ if(mouse_check_button(mb_left) and !global.shotFired)
 	
 	global.rate = 0.4;
 	instance_destroy(global.crossHair);
-	
 }

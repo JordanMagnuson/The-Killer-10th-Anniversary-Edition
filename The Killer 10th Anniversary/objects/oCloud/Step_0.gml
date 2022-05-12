@@ -20,3 +20,9 @@ else if (x < (0 - sprite_width))
 	instance_destroy(self); 
 	//show_debug_message("CLOUD GONE");
 }
+
+//if the global rate has changed since the cloud was created, change the cloud speed according to the global.rate
+if(rate != global.rate){
+	rate = global.rate;
+	cloud_speed = MIN_SPEED + random(1) * (MAX_SPEED - MIN_SPEED) * global.rate;
+}

@@ -27,5 +27,4 @@ if(started == false and oPlayer.walking){
 }
 else if(global.playSounds && !global.fadeSounds && !soundsStopped && !fadingOut){
 	stopSounds();	
-	show_debug_message("stopping SOUNDS");
 }
