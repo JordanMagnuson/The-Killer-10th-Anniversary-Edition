@@ -2,7 +2,7 @@ event_inherited();
 randomise();
 
 //NEED TO FIND OUT APPROPRIATE HEIGHT
-MAX_HEIGHT = 130;
+MAX_HEIGHT = 120;
 MIN_HEIGHT = 20;
 MAX_SPEED = global.cloud_max_speed;
 MIN_SPEED =	global.cloud_min_speed;
