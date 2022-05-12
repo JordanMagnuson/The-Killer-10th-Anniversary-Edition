@@ -49,7 +49,7 @@ if(X){
 		}
 		walking = true;
 	}
-	else if (sprite_index = sprKillerPush && image_index == 3){
+	else if (sprite_index == sprKillerPush && image_index >= 3){
 		sprite_index = sprKillerWalk;
 		canPush = true;
 		walking = true;
