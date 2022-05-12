@@ -12,13 +12,20 @@ if(inProcess){
 }
 
 if(fadingOut){
-	currentGain00 -= (1/duration)*room_speed;
-	currentGain01 -= (1/duration)*room_speed;
+	currentGain00 -= (1/duration)/room_speed;
+	currentGain01 -= (1/duration)/room_speed;
 	audio_emitter_gain(soundEmitter00, currentGain00);
 	audio_emitter_gain(soundEmitter01, currentGain01);
+	if(currentGain00 <= 0 and currentGain01 <= 0)
+		fadingOut = false;
 }
 
 //update 
-if(global.playSounds && !global.fadeSounds && !soundsStopped){
+if(started == false and oPlayer.walking){
+	started = true;
+	fadeOut(5);
+}
+else if(global.playSounds && !global.fadeSounds && !soundsStopped && !fadingOut){
 	stopSounds();	
+	show_debug_message("stopping SOUNDS");
 }

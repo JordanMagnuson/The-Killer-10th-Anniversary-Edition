@@ -3,7 +3,7 @@ event_inherited();
 //---------------------------------------------------------------
 // Play sound on emitter.
 // This is different from original source.
-if (!sndPlaying) {
+if (!sndPlaying and !global.MUSIC_WHILE_WALKING) {
 	audio_play_sound_on(sndEmit, sndStream, true, 1);
 	sndPlaying = true;
 }

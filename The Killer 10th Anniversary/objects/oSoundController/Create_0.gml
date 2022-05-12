@@ -12,6 +12,7 @@ fadeOnOne = false;
 fadeOnTwo = false;
 location = "";
 currentSound = "";
+started = false;
 
 function soundController(location){
 	self.location = location;
@@ -31,7 +32,7 @@ function fadeOut(duration = 15){
 		return;
 	global.fadeSounds = true;
 	global.playSounds = false;
-	alarm[0] = duration; //when the fading is complete, call fadeComplete();
+	alarm[0] = duration * room_speed; //when the fading is complete, call fadeComplete();
 	self.duration = duration;
 	fadingOut = true;
 }
