@@ -8,15 +8,15 @@
   <compiler>
     <define append="true">
       <name>CONFIG::debug</name>
-      <value>true</value>
-    </define>
-    <define append="true">
-      <name>CONFIG::release</name>
       <value>false</value>
     </define>
     <define append="true">
+      <name>CONFIG::release</name>
+      <value>true</value>
+    </define>
+    <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'5/11/2022'</value>
+      <value>'5/12/2022'</value>
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -30,7 +30,9 @@
       <name>CONFIG::desktop</name>
       <value>true</value>
     </define>
-    <verbose-stacktraces>true</verbose-stacktraces>
+    <optimize>true</optimize>
+    <omit-trace-statements>true</omit-trace-statements>
+    <verbose-stacktraces>false</verbose-stacktraces>
     <source-path append="true">
       <path-element>C:\Users\Raven Lickey\Desktop\GitHub Host\AGP Ports\The-Killer-Port\The Killer Source\src</path-element>
       <path-element>C:\Users\Raven Lickey\Desktop\GitHub Host\AGP Ports\The-Killer-Port\The Killer Source\ChevyRay-FlashPunk-46c75be</path-element>

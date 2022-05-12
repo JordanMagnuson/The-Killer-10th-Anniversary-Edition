@@ -9,7 +9,7 @@ MIN_SPEED =	global.cloud_min_speed;
 y = MIN_HEIGHT + random(1) * (MAX_HEIGHT - MIN_HEIGHT);
 
 // Allow variable cloud speed. New from original AS3 source.
-cloud_speed = MIN_SPEED + random(1) * (MAX_SPEED - MIN_SPEED);
+cloud_speed = MIN_SPEED + random(1) * (MAX_SPEED - MIN_SPEED) * global.rate;
 integer_pixel = 0;
 
 //fix this later

@@ -1,4 +1,5 @@
-y += fallSpeed * global.rate;
+//y += fallSpeed * global.rate;
+y += 1100/(86*room_speed);
 
 if(y > 1175)
 {
