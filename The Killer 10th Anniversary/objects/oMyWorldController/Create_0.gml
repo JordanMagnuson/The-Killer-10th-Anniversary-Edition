@@ -32,6 +32,7 @@ instance_create_depth(0,0,0, oColors);
 
 // Sound Controller
 instance_create_depth(0,0,0, oSoundController);
+oSoundController.soundController(currentLocation);
 
 // Ground and Sky
 ground = instance_create_depth(0,175,12, oGround);

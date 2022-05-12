@@ -16,10 +16,11 @@ currentSound = "";
 function soundController(location){
 	self.location = location;
 	if(oMyWorldController.time == "day"){
-		currentSound = oLocation.daySound;
+		currentSound = asset_get_index(oLocation.daySound);
+		show_debug_message("Day sound set");
 	}	
 	else{
-		currentSound = oLocation.nightSound;
+		currentSound = asset_get_index(oLocation.nightSound);
 	}
 	audio_play_sound_on(soundEmitter00, currentSound, true, 100);
 	
@@ -35,7 +36,7 @@ function fadeOut(duration = 15){
 	fadingOut = true;
 }
 
-function stopSounds(){	//NOTE: There is an audio_stop_all() function built into GMS2 that may be good here
+function stopSounds(){	
 	if(global.fadeSounds){
 		fadingOut = true;
 		if(inProcess){
@@ -52,18 +53,19 @@ function stopSounds(){	//NOTE: There is an audio_stop_all() function built into 
 function changeLocation(location){
 	if(!global.playSounds || global.fadeSounds)
 		return;
-	if(!inProcess){
+	//if(!inProcess){
 		if(oMyWorldController.time == "day"){
 			newSound =  asset_get_index(oLocation.daySound);	
 		}
 		else{
 			newSound = asset_get_index(oLocation.nightSound);
 		}
+		show_debug_message("new sound is playing: " + oLocation.daySound);
 		audio_emitter_gain(soundEmitter01, currentGain01);
 		audio_play_sound_on(soundEmitter01, newSound, 1, 100); //play the new sound
 		currentSound = newSound;
 		inProcess = true;
-	}
+	//}
 }
 
 function fadeComplete(){
