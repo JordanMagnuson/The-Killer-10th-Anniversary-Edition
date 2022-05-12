@@ -21,7 +21,7 @@ if(fadingOut){
 }
 
 //update 
-if(started == false and oPlayer.walking){
+if(started == false and oPlayer.walking and global.MUSIC_WHILE_WALKING){
 	started = true;
 	fadeOut(5);
 }
