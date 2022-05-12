@@ -25,12 +25,15 @@ if(mouse_check_button_released(mb_any)){
 			instance_destroy(self);
 			break;
 		case 1:
+			global.endScreen++;
 			instance_destroy(oEndScreen02);//clear the old screen
 			instance_create_depth(0,0,0, oFadeIn);
 			oFadeIn.FadeIn(oColors.BLACK, 6);
 			instance_create_depth(0,0,0,oEndScreen03);
 			window_set_cursor(cr_none); // hide mouse cursor
 			instance_destroy(self);
+			break;
+		default:
 			break;
 	}
 }
