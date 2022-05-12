@@ -1,5 +1,6 @@
 if(mouse_check_button(mb_left) and !global.shotFired)
 {
+	audio_stop_all();
 	global.shotFired = true;
 	
 	audio_play_sound(sndGunshot, 999, false);
