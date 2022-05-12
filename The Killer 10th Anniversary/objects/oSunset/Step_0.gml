@@ -24,3 +24,6 @@ if(fadeout == true){
 	image_alpha -= (1/FADE_OUT_DURATION)/room_speed;
 	//show_debug_message("Sunset FADEOUT: " + string(image_alpha));
 }
+
+if(instance_exists(oView))
+	y = oView.y;
