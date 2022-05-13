@@ -79,3 +79,8 @@ else
 		}
 	}
 }
+
+if(rate != global.rate){
+	rate = global.rate;
+	FADE_OUT_DURATION = 2/global.rate;
+}

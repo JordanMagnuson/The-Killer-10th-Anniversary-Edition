@@ -1,4 +1,5 @@
-FADE_OUT_DURATION = 8;
+FADE_OUT_DURATION = 2/global.rate;
+rate = global.rate;
 
 WALK_DELAY_TIME = 1;
 STOP_DELAY_TIME = 0.7;
