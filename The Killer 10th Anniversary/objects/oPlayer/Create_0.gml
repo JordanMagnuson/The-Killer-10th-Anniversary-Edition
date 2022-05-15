@@ -4,6 +4,10 @@ animSpeed = 0;
 walking = false;
 canPush = true;
 
+// allowMove prevents the player from walking for 5 frames
+// added to fix bugs related to input spam
+allowMove = false;
+
 sprite_index = sprKillerWalk;
 
 animSpeed = global.WALKING_SPEED / 10;

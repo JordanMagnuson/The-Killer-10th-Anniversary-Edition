@@ -1,5 +1,10 @@
 X = keyboard_check(vk_space);
 
+if(X and !allowMove and alarm_get(0) < 0)
+{
+	alarm_set(0,5);
+}
+
 if(global.playSounds && walking && !audio_is_playing(sndWalking)){
 	audio_play_sound(sndWalking, 75, true);
 }
@@ -7,7 +12,7 @@ else if(!global.playSounds){
 	audio_stop_sound(sndWalking);
 }
 
-if(X){
+if(X and allowMove){
 	if(global.exploded){
 		walking = false;
 		return;
@@ -63,6 +68,8 @@ else{
 }
 
 if(keyboard_check_released(vk_space)){
+	allowMove = false;
+	alarm_set(0, -1);
 	if(!global.reachedPlains){
 		if(!instance_exists(oTextNotFarEnough)){
 			instance_create_depth(0, 0, 0, oTextNotFarEnough);
