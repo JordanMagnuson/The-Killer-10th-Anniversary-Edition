@@ -25,7 +25,6 @@ if(X and allowMove){
 			
 		}
 		standingPush();
-		show_debug_message("standing push");
 		global.startedWalking = true;
 		walking = false;
 	}
@@ -41,7 +40,6 @@ if(X and allowMove){
 	else if(sprite_index == sprKillerWalk){
 		if(global.victim.x -x <= PUSH_DISTANCE and canPush){
 			push();
-			show_debug_message("global.victim.x -x push");//this is the one being triggered
 		}
 		
 		//Reset canPush on the 3rd frame of the walking animation

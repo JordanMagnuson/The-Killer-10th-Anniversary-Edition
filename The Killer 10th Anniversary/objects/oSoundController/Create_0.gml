@@ -13,15 +13,17 @@ fadeOnTwo = false;
 location = "";
 currentSound = "";
 started = false;
-
+day = "";
+night = "";
 function soundController(location){
 	self.location = location;
+	day = asset_get_index(oLocation.daySound);
+	night = asset_get_index(oLocation.nightSound);
 	if(oMyWorldController.time == "day"){
-		currentSound = asset_get_index(oLocation.daySound);
-		show_debug_message("Day sound set");
+		currentSound = day
 	}	
 	else{
-		currentSound = asset_get_index(oLocation.nightSound);
+		currentSound = night;
 	}
 	audio_play_sound_on(soundEmitter00, currentSound, true, 100);
 	
@@ -55,13 +57,34 @@ function changeLocation(location){
 	if(!global.playSounds || global.fadeSounds)
 		return;
 	//if(!inProcess){
+	show_debug_message(oMyWorldController.currentLocation.locationType);
+	switch(oMyWorldController.currentLocation.locationType){
+		case "beach":
+			day = sndWavesAmbient;
+			night = sndWavesAmbient;
+			break;
+		case "forest":
+			day = sndForestAmbient;
+			night = sndForestNightAmbient;
+			break;
+		case "jungle":
+			day = sndJungleDay;
+			night = sndJungleNight;
+			break;
+		case "plains":
+			day = sndForestAmbient;
+			night = sndForestNightAmbient;
+			break;
+		default:
+			show_debug_message("Sound selection failed");
+	}
+		
 		if(oMyWorldController.time == "day"){
-			newSound =  asset_get_index(oLocation.daySound);	
+			newSound = day;
 		}
 		else{
-			newSound = asset_get_index(oLocation.nightSound);
+			newSound = night
 		}
-		show_debug_message("new sound is playing: " + oLocation.daySound);
 		audio_emitter_gain(soundEmitter01, currentGain01);
 		audio_play_sound_on(soundEmitter01, newSound, 1, 100); //play the new sound
 		currentSound = newSound;
@@ -105,11 +128,11 @@ function fadeComplete(){
 		stopSounds();	
 	}
 	
-	if(oMyWorldController.time == "day" && currentSound != asset_get_index(oLocation.daySound)){
+	if(oMyWorldController.time == "day" && currentSound != day){
 		show_debug_message("catching up with day");
 		startDay();	
 	}
-	else if (oMyWorldController.time != "day" && currentSound !=asset_get_index(oLocation.nightSound)){
+	else if (oMyWorldController.time != "day" && currentSound != night){
 		show_debug_message("catching up with night");
 		startNight();
 	}
@@ -130,11 +153,9 @@ function startNight(){
 		//show_debug_message("new sound vol: " + newSound.volume);
 	}
 	else{
-		newSound =  asset_get_index(oLocation.nightSound); //this is setting newSound to -1
-		show_debug_message("sound: " + string(oLocation.nightSound));
+		newSound = night;
 		audio_emitter_gain(soundEmitter01, currentGain01);
 		audio_play_sound_on(soundEmitter01, newSound, 1, 100); //play the new sound
-		show_debug_message("sound id: " + string(newSound));
 		currentSound = newSound;
 		inProcess = true;
 	}	
@@ -150,7 +171,7 @@ function startDay(){
 		//show_debug_message("new sound vol: " + newSound.volume);
 	}
 	else{
-		newSound =  asset_get_index(oLocation.daySound);
+		newSound = day;
 		audio_emitter_gain(soundEmitter01, currentGain01);
 		audio_play_sound_on(soundEmitter01, newSound, 1, 100); //play the new sound
 		currentSound = newSound;
