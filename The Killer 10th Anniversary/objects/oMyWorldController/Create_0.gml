@@ -1,4 +1,4 @@
-CHANGE_LOCATION_TIME = 4;
+CHANGE_LOCATION_TIME = 4*room_speed;
 
 oddFrame = 1;
 thirdFrame = 1;

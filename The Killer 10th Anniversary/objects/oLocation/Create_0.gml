@@ -12,8 +12,8 @@ sEmit3 = -1;
 sEmit4 = -1;
 
 // Default ambient sound to silence.
-DAY_SOUND = "sndSilence";
-NIGHT_SOUND = "sndSilence";
+daySound = "sndSilence";
+nightSound = "sndSilence";
 
 function Location(DAY_SOUND, NIGHT_SOUND, maxCreationTime = 4, minCreationTime = 0.5, creationTimeIncreaseRate = 0.4, creationTimeDecreaseRate = 0.4){
 	daySound = DAY_SOUND;

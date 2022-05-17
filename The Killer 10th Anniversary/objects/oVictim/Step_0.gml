@@ -1,5 +1,8 @@
 image_speed = animSpeed;
 
+if(oPlayer.x > x)
+	x += 1;
+
 if(fading)
 	image_alpha = alarm_get(5)/(FADE_OUT_DURATION * room_speed);
 
@@ -18,7 +21,7 @@ if(!walking)
 if(stumbling)
 {
 	setGraphics("stumble");
-	x += 0.2
+	x += 0.2;
 }
 else if(walking)
 {

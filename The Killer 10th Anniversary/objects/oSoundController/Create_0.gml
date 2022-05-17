@@ -130,9 +130,11 @@ function startNight(){
 		//show_debug_message("new sound vol: " + newSound.volume);
 	}
 	else{
-		newSound =  asset_get_index(oLocation.nightSound);
+		newSound =  asset_get_index(oLocation.nightSound); //this is setting newSound to -1
+		show_debug_message("sound: " + string(oLocation.nightSound));
 		audio_emitter_gain(soundEmitter01, currentGain01);
 		audio_play_sound_on(soundEmitter01, newSound, 1, 100); //play the new sound
+		show_debug_message("sound id: " + string(newSound));
 		currentSound = newSound;
 		inProcess = true;
 	}	
