@@ -5,14 +5,14 @@
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
-  "type": 0,
+  "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndForestNightAmbient.wav",
-  "duration": 20.3232651,
+  "duration": 20.0660324,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

@@ -5,14 +5,14 @@
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
-  "type": 0,
+  "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndJungleDay.wav",
-  "duration": 60.26449,
+  "soundFile": "sndJungleDay.mp3",
+  "duration": 60.16,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
