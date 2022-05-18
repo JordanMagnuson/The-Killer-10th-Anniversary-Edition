@@ -30,6 +30,12 @@ if(keyboard_check_pressed(vk_f5) && !musicStarted){
 
 }
 
+if(keyboard_check_pressed(vk_f4)){
+	room_goto(rmGameOver);
+}
+
+
+
 // Flip oddFrame every frame
 oddFrame *= -1;
 
