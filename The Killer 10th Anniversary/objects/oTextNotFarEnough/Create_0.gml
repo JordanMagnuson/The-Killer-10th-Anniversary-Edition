@@ -6,7 +6,7 @@ text = "";
 draw_set_font(fntFont);
 
 x = 20;
-y = 130;
+y = 127;
 alpha = 0;
 
 if(global.touchedPlains)
@@ -22,7 +22,7 @@ else switch(global.numberOfStops)
 		text = "Continue to the fields";
 		break;
 	case 2:
-		text = "There are fields ahead";
+		text = "There are fields ahead";  
 		break;
 	default:
 		text = "The fields are beyond the beach.";

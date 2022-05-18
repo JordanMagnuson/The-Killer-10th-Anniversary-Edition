@@ -6,7 +6,7 @@ text = "Hold space to start walking.";
 draw_set_font(fntFont);
 
 x = 20;
-y = 100;
+y = 127;
 alpha = 0;
 
 
