@@ -12,27 +12,22 @@ FADE_OUT_DURATION = 10;
 sprite_index = sprStars;
 
 image_alpha = 0;
-
+depth = 500;
 
 shouldFadeIn = false;
+fadein = false;
+fadeout = false;
 
 function stars(shouldFadeIn = true){
 	self.shouldFadeIn = shouldFadeIn;
-	depth = 500;
 	if(shouldFadeIn){
 		image_alpha = 0;	
-		fadeIn();
+		fadein = true;
+		show_debug_message("stars fading in");
 	}
 	else{
 		image_alpha = 1;	
 	}
-}
-fadein = false;
-fadeout = false;
-
-
-function fadeIn(){
-	fadein = true;	
 }
 
 alarm[0] = SHOOTING_STAR_FREQ * room_speed;

@@ -19,6 +19,7 @@ function Night(shouldFadeIn = true){
 	else{
 		instance_create_depth(0,0,0, oStars);
 		oStars.stars(false);
+		show_debug_message("stars created 1");
 		image_alpha = MAX_ALPHA;
 	}
 
@@ -31,6 +32,8 @@ alarm[0] = DURATION *room_speed;
 function fadeIn(){
 	fadein = true;	
 	instance_create_depth(0,0,0, oStars);
+	oStars.stars();
+	show_debug_message("stars created 2");
 }
 
 function fadeOut(){

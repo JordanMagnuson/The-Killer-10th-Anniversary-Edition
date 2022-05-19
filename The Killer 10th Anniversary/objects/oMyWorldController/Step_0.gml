@@ -83,5 +83,5 @@ else if(global.fadeSounds and audio_emitter_get_gain(musicEmit) >= 1){
 }
 
 if(keyboard_check_pressed(ord("S"))){
-	room_goto(rmGameOver);	
+	advanceTime();
 }
