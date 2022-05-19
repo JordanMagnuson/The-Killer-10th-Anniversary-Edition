@@ -22,7 +22,7 @@ function makeVictimRun()
 
 	alarm[3] = (17/global.rate) * room_speed; //start falling camera alarm
 	//one whole minute before falling camera happens in source code
-	oMyWorldController.playMusicFromPlayer();
+	alarm[5] = 5 * room_speed;
 	fadeItems();
 }
 
