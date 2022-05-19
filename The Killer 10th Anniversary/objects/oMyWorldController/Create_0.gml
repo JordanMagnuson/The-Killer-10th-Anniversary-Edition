@@ -127,7 +127,7 @@ function fadeMusicIn(duration = 10){
 	oSoundController.fadeOut(duration);
 	global.playSounds = false;
 	global.fadeSounds = true;
-	
+	audio_emitter_gain(musicEmit, 0);
 	audio_play_sound_on(musicEmit, music, true, 100);
 	self.duration = duration;
 }

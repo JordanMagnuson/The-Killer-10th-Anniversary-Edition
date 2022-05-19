@@ -16,7 +16,13 @@ if(mouse_check_button(mb_left) and !global.shotFired)
 	}
 	else
 	{
-		alarm_set(1, 1);
+		if(global.MUSIC_WHILE_WALKING){
+			alarm[1] = 1;
+		}
+		else{
+			alarm[5] = 5 * room_speed;	
+		}
+		
 		alarm_set(2, 1);
 	}
 	
