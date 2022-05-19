@@ -10,7 +10,8 @@ if(dist > 5){
 else{		
 	speed = 0;
 }*/
-y += 1100/(86*room_speed) 
+
+y += 1100/(86*room_speed);
 //oCamera.x = x;
 //oCamera.y = y;
 

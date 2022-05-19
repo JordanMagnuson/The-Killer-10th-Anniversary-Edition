@@ -57,7 +57,6 @@ function changeLocation(location){
 	if(!global.playSounds || global.fadeSounds)
 		return;
 	//if(!inProcess){
-	show_debug_message(oMyWorldController.currentLocation.locationType);
 	switch(oMyWorldController.currentLocation.locationType){
 		case "beach":
 			day = sndWavesAmbient;

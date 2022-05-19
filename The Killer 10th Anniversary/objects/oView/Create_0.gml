@@ -4,7 +4,7 @@ _speed = "";
 
 function View(toFollow, within = "", mySpeed = 1){
 	x = 0;
-	y = 34;
+	y = camera_get_view_y(view_camera[0]);
 
 	setView(toFollow, within, mySpeed);
 }
