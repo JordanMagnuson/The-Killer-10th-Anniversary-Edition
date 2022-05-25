@@ -1,3 +1,5 @@
+randomize();
+
 CHANGE_LOCATION_TIME = 4*room_speed;
 
 oddFrame = 1;
