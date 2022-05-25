@@ -12,7 +12,7 @@ if(mouse_check_button(mb_left) and !global.shotFired)
 		show_debug_message("mercy shot");
 		global.mercifulShot = true;
 		global.playSounds = false;
-		alarm_set(4, MAX_TIME_TILL_KNEEL * random(1) + MIN_TIME_TILL_KNEEL);
+		alarm_set(4, 3*room_speed);
 	}
 	else
 	{

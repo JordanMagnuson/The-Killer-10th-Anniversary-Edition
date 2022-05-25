@@ -205,6 +205,7 @@
     {"id":{"name":"sprWaves01","path":"sprites/sprWaves01/sprWaves01.yy",},"order":13,},
     {"id":{"name":"oJungleTree","path":"objects/oJungleTree/oJungleTree.yy",},"order":1,},
     {"id":{"name":"sprMusicChoiceScreen","path":"sprites/sprMusicChoiceScreen/sprMusicChoiceScreen.yy",},"order":30,},
+    {"id":{"name":"sprVictimKneel","path":"sprites/sprVictimKneel/sprVictimKneel.yy",},"order":73,},
     {"id":{"name":"oCrosshair","path":"objects/oCrosshair/oCrosshair.yy",},"order":36,},
     {"id":{"name":"sprGiantPine01","path":"sprites/sprGiantPine01/sprGiantPine01.yy",},"order":2,},
     {"id":{"name":"oPlayerShooting","path":"objects/oPlayerShooting/oPlayerShooting.yy",},"order":38,},

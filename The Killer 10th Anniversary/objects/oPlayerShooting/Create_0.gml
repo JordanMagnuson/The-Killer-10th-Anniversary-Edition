@@ -7,7 +7,7 @@ sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, spr
 
 global.gun = instance_create_depth(x, y, depth, oGun);
 global.crossHair = instance_create_depth(x, y, depth, oCrosshair);
-
+alarm[0] = (MAX_TIME_TILL_KNEEL * random(1) + MIN_TIME_TILL_KNEEL) * room_speed;
 
 function makeVictimKneel()
 {
@@ -45,8 +45,8 @@ function killVictim()
 {
 	global.deadVictim = instance_create_depth(x, y, depth, oDeadVictim);
 	global.deadUnderground = instance_create_depth(x, y, depth, oDeadUnderground);
-	global.deadVictim.x = global.victim.x + 12;//+12 makes up for origin configuration
-	global.deadVictim.y = global.victim.y+ 15;//+15 makes up for origin configuration
+	global.deadVictim.x = global.victim.x + 12;//+10 makes up for origin configuration
+	global.deadVictim.y = global.victim.y
 	instance_destroy(global.victim);
 }
 
