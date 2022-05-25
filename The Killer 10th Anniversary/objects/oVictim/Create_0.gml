@@ -104,7 +104,7 @@ function stumble()
 	stumbling = true;
 			
 	var vol = 0.5 + 0.5 * random(1);
-	audio_play_sound(sndWalking, 999, true); 
+	//audio_play_sound(sndWalking, 999, true); 
 }
 
 function waitToFade()

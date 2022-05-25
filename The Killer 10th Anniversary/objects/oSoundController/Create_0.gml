@@ -97,7 +97,7 @@ function fadeComplete(){
 	soundEmitter00 = audio_emitter_create(); //recreate the emitter
 	
 	//reset the currentGain
-	currentGain00 = 1;
+	currentGain00 = currentGain01;
 	currentGain01 = 0;
 	
 	//change the sound to play on soundEmitter00 rather than soundEmitter01
