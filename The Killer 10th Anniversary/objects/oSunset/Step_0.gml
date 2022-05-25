@@ -25,5 +25,6 @@ if(fadeout == true){
 	//show_debug_message("Sunset FADEOUT: " + string(image_alpha));
 }
 
-if(instance_exists(oView))
+if(instance_exists(oView)){
 	y = oView.y;
+}

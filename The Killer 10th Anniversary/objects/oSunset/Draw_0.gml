@@ -12,7 +12,7 @@ if (USE_MULTIPLY_BLENDMODE) {
 
 	// Draw the surface using multiply blendmode.
 	gpu_set_blendmode_ext(bm_zero, bm_src_color);	// Multiply blendmode.
-	draw_surface(global.sunset_overlay_surface, 0, 0);
+	draw_surface(global.sunset_overlay_surface, 0, y);
 	gpu_set_blendmode(bm_normal);
 }
 else {
