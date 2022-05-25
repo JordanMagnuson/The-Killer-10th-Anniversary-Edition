@@ -53,31 +53,35 @@ function stopSounds(){
 	}	
 }
 
-function changeLocation(location){
+function changeLocation(location = "jungle"){
 	if(!global.playSounds || global.fadeSounds)
 		return;
-	//if(!inProcess){
-	switch(oMyWorldController.currentLocation.locationType){
-		case "beach":
-			day = sndWavesAmbient;
-			night = sndWavesAmbient;
-			break;
-		case "forest":
-			day = sndForestAmbient;
-			night = sndForestNightAmbient;
-			break;
-		case "jungle":
-			day = sndJungleDay;
-			night = sndJungleNight;
-			break;
-		case "plains":
-			day = sndForestAmbient;
-			night = sndForestNightAmbient;
-			break;
-		default:
-			show_debug_message("Sound selection failed");
+	
+	switch(oMyWorldController.currentLocation.locationType){ 
+			case "beach":
+				day = sndWavesAmbient;
+				night = sndWavesAmbient;
+				break;
+			case "forest":
+				day = sndForestAmbient;
+				night = sndForestNightAmbient;
+				break;
+			case "jungle":
+				day = sndJungleDay;
+				night = sndJungleNight;
+				break;
+			case "plains":
+				day = sndForestAmbient;
+				night = sndForestNightAmbient;
+				break;
+			default:
+				show_debug_message("Sound selection failed");
 	}
-		
+	
+	if(inProcess){
+		show_debug_message("in process");
+	}
+	else{
 		if(oMyWorldController.time == "day"){
 			newSound = day;
 		}
@@ -88,7 +92,7 @@ function changeLocation(location){
 		audio_play_sound_on(soundEmitter01, newSound, 1, 100); //play the new sound
 		currentSound = newSound;
 		inProcess = true;
-	//}
+	}
 }
 
 function fadeComplete(){

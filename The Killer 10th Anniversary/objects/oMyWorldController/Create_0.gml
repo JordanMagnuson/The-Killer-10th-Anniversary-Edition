@@ -230,12 +230,11 @@ function changeLocation(location = ""){
 			currentLocation = instance_create_depth(0, 0, 0, oPlains);
 		}
 	}
-	if(oSoundController)
-		oSoundController.changeLocation(location);
 	
 	self.location = currentLocation.locationType;
 	show_debug_message(self.location)
-	oLocation.Location();    
+	oLocation.Location();   
+	oSoundController.changeLocation(location);
 	
 /*
 	//destroys old ground when change location is spammed
