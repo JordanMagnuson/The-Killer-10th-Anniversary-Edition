@@ -11,7 +11,7 @@ alarm[0] = (MAX_TIME_TILL_KNEEL * random(1) + MIN_TIME_TILL_KNEEL) * room_speed;
 
 function makeVictimKneel()
 {
-	if(!global.mercifulShot)
+	if(!global.mercifulShot && instance_exists(global.victim))
 		global.victim.kneel();
 }
 
