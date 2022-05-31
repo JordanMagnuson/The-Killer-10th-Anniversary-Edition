@@ -50,9 +50,9 @@ function kneel()
 
 function stop()
 {
-	if(audio_is_playing(sndWalking))
+	if(audio_is_playing(sndVictimWalking))
 	{
-		audio_stop_sound(sndWalking);
+		audio_stop_sound(sndVictimWalking);
 	}
 	walking = false;
 	
@@ -104,7 +104,9 @@ function stumble()
 	stumbling = true;
 			
 	var vol = 0.5 + 0.5 * random(1);
-	//audio_play_sound(sndWalking, 999, true); 
+	if (!audio_is_playing(sndVictimWalking)) {
+		audio_play_sound(sndVictimWalking, 999, true); 
+	}
 }
 
 function waitToFade()
