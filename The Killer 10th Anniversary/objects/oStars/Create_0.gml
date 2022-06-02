@@ -34,6 +34,11 @@ alarm[0] = SHOOTING_STAR_FREQ * room_speed;
 alarm[1] = METEOR_SHOWER_FREQ * room_speed;
 
 function releaseShootingStar(){
+	// Stop time when shot is fired.
+	if (global.shotFired || global.exploded) {
+		return;
+	}
+	
 	alarm[0] = SHOOTING_STAR_FREQ * room_speed;
 	if(!startedFadeOut){
 		starDirection = choose(-1,1)
@@ -46,6 +51,11 @@ function releaseShootingStar(){
 }
 
 function releaseMeteorShower(){
+	// Stop time when shot is fired.
+	if (global.shotFired || global.exploded) {
+		return;
+	}	
+	
 	show_debug_message("release meteor shower chance");
 	show_debug_message("releaseMeteorShower random: " + string(random(1)));
 	if(!meteorShowerSeen){

@@ -15,4 +15,6 @@ if(fadeout == true){
 // Stop time when shot is fired.
 if (global.shotFired || global.exploded) {
 	starSpeed = 0;
+	fadein = false;
+	fadeout = false;
 }
