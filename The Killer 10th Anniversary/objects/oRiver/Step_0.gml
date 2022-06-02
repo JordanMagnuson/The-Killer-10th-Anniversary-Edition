@@ -38,3 +38,8 @@ if(global.shotFired)
 {
 	fading = true;
 }
+
+// Stop time when shot is fired.
+if (global.shotFired || global.exploded) {
+	image_speed = 0;
+}

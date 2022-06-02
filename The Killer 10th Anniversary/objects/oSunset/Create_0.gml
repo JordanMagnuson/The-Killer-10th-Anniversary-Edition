@@ -31,6 +31,7 @@ function fadeOut(){
 }
 
 function complete(){
+	// Stop time when shot is fired.
 	if (global.shotFired || global.exploded)
 		return;	
 	instance_create_depth(0,0,0, oNight);

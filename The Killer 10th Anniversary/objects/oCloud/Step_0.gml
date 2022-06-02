@@ -26,3 +26,8 @@ if(rate != global.rate){
 	rate = global.rate;
 	cloud_speed *= global.rate;
 }
+
+// Stop time when shot is fired.
+if (global.shotFired || global.exploded) {
+	cloud_speed = 0;
+}

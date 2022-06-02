@@ -28,3 +28,9 @@ if(fadeout == true){
 if(instance_exists(oView)){
 	y = oView.y;
 }
+
+// Stop time when shot is fired.
+if (global.shotFired || global.exploded) {
+	fadein = false;
+	fadeout = false;
+}

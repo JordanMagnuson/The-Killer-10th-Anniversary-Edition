@@ -11,3 +11,8 @@ if(fadeout == true){
 		destroy();
 	image_alpha -= (1/FADE_OUT_DURATION)/room_speed;
 }
+
+// Stop time when shot is fired.
+if (global.shotFired || global.exploded) {
+	starSpeed = 0;
+}
