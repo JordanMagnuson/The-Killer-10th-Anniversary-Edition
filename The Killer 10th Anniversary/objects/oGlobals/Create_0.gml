@@ -1,5 +1,6 @@
-global.MUSIC_WHILE_WALKING = false;
-		
+global.ALLOW_MUSIC_OPTION = true;	// Whether to give the player the choice to have music or ambient sounds in game.
+global.MUSIC_WHILE_WALKING = false; // Default music or no music of choice is not given?
+
 // Global constants
 // Day-evening-night cycle = 95 seconds
 // If music starts from beginning, we want walk to take between 3:00 and 3:50

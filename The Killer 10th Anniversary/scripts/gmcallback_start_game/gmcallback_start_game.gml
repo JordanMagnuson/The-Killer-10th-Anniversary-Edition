@@ -5,5 +5,10 @@ function gmcallback_start_game() {
 	// Note that this must be a global script function, and must use the reserved name "gmcallback_start_game".
 	// See https://forum.yoyogames.com/index.php?threads/html5-button-to-switch-to-fullscreen.18436/post-446787
 	toggleFullscreen();
-	room_goto_next();
+	if (global.ALLOW_MUSIC_OPTION) {
+		room_goto(rmMusicChoice);
+	}
+	else {
+		room_goto(rmMyWorld);
+	}
 }

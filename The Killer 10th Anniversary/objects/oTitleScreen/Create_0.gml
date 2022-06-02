@@ -77,7 +77,12 @@ window_set_cursor(cr_handpoint);
 
 // If this is not a browser, skip the title screen completely.
 if (os_browser == browser_not_a_browser) {
-	room_goto(rmMusicChoice);
+	if (global.ALLOW_MUSIC_OPTION) {
+		room_goto(rmMusicChoice);
+	}
+	else {
+		room_goto(rmMyWorld);
+	}
 }
 
 surf_start_button = 0;
