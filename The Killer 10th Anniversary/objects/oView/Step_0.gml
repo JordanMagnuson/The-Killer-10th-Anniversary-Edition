@@ -11,7 +11,7 @@ else{
 	speed = 0;
 }*/
 
-y += 1100/(86*room_speed);
+y += 1100/(86*room_speed)*global.rate/0.4;
 //oCamera.x = x;
 //oCamera.y = y;
 

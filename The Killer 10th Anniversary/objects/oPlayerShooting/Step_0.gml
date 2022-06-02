@@ -17,15 +17,17 @@ if(mouse_check_button(mb_left) and !global.shotFired)
 	else
 	{
 		if(global.MUSIC_WHILE_WALKING){
+			global.rate = 0.4;
 			alarm[1] = 1;
 		}
 		else{
+			global.rate = 0.05;
 			alarm[5] = 5 * room_speed;	
+			alarm[6] = 5 * room_speed;	
 		}
 		
 		alarm_set(2, 1);
 	}
 	
-	global.rate = 0.4;
 	instance_destroy(global.crossHair);
 }

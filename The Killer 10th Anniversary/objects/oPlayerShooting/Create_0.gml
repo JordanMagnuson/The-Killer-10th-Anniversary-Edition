@@ -46,7 +46,7 @@ function killVictim()
 	global.deadVictim = instance_create_depth(x, y, depth, oDeadVictim);
 	global.deadUnderground = instance_create_depth(x, y, depth, oDeadUnderground);
 	global.deadVictim.x = global.victim.x + 12;//+12 makes up for origin configuration (victim dying has a differnt origin for the spinning sequence when falling)
-	global.deadVictim.y = global.victim.y
+	global.deadVictim.y = global.victim.y - 4;
 	instance_destroy(global.victim);
 }
 
