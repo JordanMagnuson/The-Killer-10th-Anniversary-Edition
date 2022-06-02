@@ -4,6 +4,7 @@ TIME_BETWEEN_EACH = 3/global.rate;
 DISTANCE_BETWEEN_EACH = 45;
 
 imageIndex = 1;
+x = 130;
 
 function added()
 {

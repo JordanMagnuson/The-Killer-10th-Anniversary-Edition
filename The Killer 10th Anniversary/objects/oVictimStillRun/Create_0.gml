@@ -1,8 +1,8 @@
 shouldFadeIn = true;
-FADE_IN_DURATION = 2;
-FADE_OUT_DURATION = 2;
+FADE_IN_DURATION = 2/global.rate;
+FADE_OUT_DURATION = 2/global.rate;
 
-displayTime = 0.5;
+displayTime = 0.5/global.rate;
 
 image_speed = 0;
 alpha = 1;

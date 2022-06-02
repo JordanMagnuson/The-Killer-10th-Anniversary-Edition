@@ -18,17 +18,19 @@ function makeVictimKneel()
 function makeVictimRun()
 {
 	global.victimStillRun = instance_create_depth(x, y, depth, oVictimStillRunController);
+	global.victimStillRun.added();
 	global.victim.fadeOut();
 
-	alarm[3] = (17/global.rate) * room_speed; //start falling camera alarm
+	// This falling camera alarm time is different from original source, I think because the camera y position starts out differently from original source.
+	alarm[3] = 19.3*room_speed/global.rate; //start falling camera alarm
 	//one whole minute before falling camera happens in source code
-	alarm[5] = 5 * room_speed;
-	fadeItems();
+	fadeMusicIn(10);
+	fadeItems(10/global.rate);
 }
 
-function fadeItems()
+function fadeItems(duration = 10)
 {
-	oMyWorldController.fadeAllItemsGeneric(10);
+	oMyWorldController.fadeAllItemsGeneric(duration);
 }
 
 function playMusic()

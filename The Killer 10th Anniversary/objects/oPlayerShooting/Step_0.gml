@@ -9,10 +9,11 @@ if(mouse_check_button(mb_left) and !global.shotFired)
 	//Merciful shot?
 	if(global.gun.image_angle > 15 and global.gun.image_angle < 340)
 	{
+		global.rate = 0.4;
 		show_debug_message("mercy shot");
 		global.mercifulShot = true;
 		global.playSounds = false;
-		alarm_set(4, 3*room_speed);
+		alarm_set(4, 3*room_speed/global.rate);
 	}
 	else
 	{
