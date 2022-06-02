@@ -6,7 +6,7 @@ text = "You have reached the fields.";
 //font is already set
 alpha = 0;
 x = 20;
-y = 120;
+y = 127;
 fade = false;
 fadein = true;
 

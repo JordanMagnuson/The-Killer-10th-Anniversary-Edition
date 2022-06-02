@@ -6,7 +6,7 @@ text = "Use the Mouse to Aim.";
 //font is already set
 alpha = 0;
 x = 20;
-y = 120;
+y = 137;
 fade = false;
 fadein = true;
 function fadeOut(){
