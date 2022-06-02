@@ -3,6 +3,10 @@ X = keyboard_check(vk_space);
 // Also allow left-click / touch for move.
 if (!X && allowMove) 
 	X = device_mouse_check_button(0, mb_left);
+	
+// Don't allow movement if orientation check is visible.
+if (X && global.orientation_check_visible)
+	X = false;
 
 if(global.playSounds && walking && !audio_is_playing(sndWalking)){
 	audio_play_sound(sndWalking, 75, true);
