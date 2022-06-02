@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndVictimWalking.wav",
-  "duration": 16.509388,
+  "soundFile": "sndWalkFast.wav",
+  "duration": 4.539615,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sndVictimWalking",
+  "name": "sndWalkFast",
   "tags": [],
   "resourceType": "GMSound",
 }

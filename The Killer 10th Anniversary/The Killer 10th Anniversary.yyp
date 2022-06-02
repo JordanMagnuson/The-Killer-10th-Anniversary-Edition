@@ -2,7 +2,6 @@
   "resources": [
     {"id":{"name":"oMountain","path":"objects/oMountain/oMountain.yy",},"order":17,},
     {"id":{"name":"sprPlayer","path":"sprites/sprPlayer/sprPlayer.yy",},"order":32,},
-    {"id":{"name":"sndVictimWalking","path":"sounds/sndVictimWalking/sndVictimWalking.yy",},"order":32,},
     {"id":{"name":"sprVictimWalkingSheet","path":"sprites/sprVictimWalkingSheet/sprVictimWalkingSheet.yy",},"order":43,},
     {"id":{"name":"sprSnowPile02","path":"sprites/sprSnowPile02/sprSnowPile02.yy",},"order":10,},
     {"id":{"name":"oSnow","path":"objects/oSnow/oSnow.yy",},"order":4,},
@@ -191,6 +190,7 @@
     {"id":{"name":"sprNightCover","path":"sprites/sprNightCover/sprNightCover.yy",},"order":31,},
     {"id":{"name":"oMusicChoiceController","path":"objects/oMusicChoiceController/oMusicChoiceController.yy",},"order":60,},
     {"id":{"name":"sprMountainSnow01","path":"sprites/sprMountainSnow01/sprMountainSnow01.yy",},"order":6,},
+    {"id":{"name":"sndWalkFast","path":"sounds/sndWalkFast/sndWalkFast.yy",},"order":33,},
     {"id":{"name":"sndGulls03","path":"sounds/sndGulls03/sndGulls03.yy",},"order":8,},
     {"id":{"name":"sprCloud06","path":"sprites/sprCloud06/sprCloud06.yy",},"order":12,},
     {"id":{"name":"sprDune02","path":"sprites/sprDune02/sprDune02.yy",},"order":4,},
