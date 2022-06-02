@@ -85,12 +85,31 @@ global.oFlowerTreeSeen = false;
 global.oSnowmanSeen = false;
 
 // Is this a touch device?
+// Note that newer iPads are unfortunately hard to detect as ios, as they tend to return os type os_macosx.
+// Might be able to do it with os_get_info().
+global.is_touch_device = 0;
 switch (os_type) {
 	case os_ios:
 	case os_android:
-		global.is_touch_device = true;
+	case os_winphone:
+		global.is_touch_device = 1;
 		break;
-	default:
-		global.is_touch_device = false;
+	case os_macosx:
+		global.is_touch_device = -1;	// Unknown, could be iPad with iOS.
 		break;
 }
+switch (os_device) {
+	case device_ios_ipad:
+	case device_ios_ipad_retina:
+		global.is_touch_device = 1;
+		break;	
+}
+switch (os_browser) {
+	case browser_ie_mobile:
+	case browser_safari_mobile:
+		global.is_touch_device = 1;
+		break;	
+}
+
+// Disable double click registering as right click. (Can mess up touch devices when right click is not needed.)
+device_mouse_dbclick_enable(false);

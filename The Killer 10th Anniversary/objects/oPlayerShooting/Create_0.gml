@@ -2,6 +2,17 @@ walking = false;
 MAX_TIME_TILL_KNEEL = 8;
 MIN_TIME_TILL_KNEEL = 4;
 
+// Small delay between stopping and when the player can shoot.
+// Mostly to prevent accidental shooting on touch devices where touch is also used to move.
+allowShoot = false;
+if (device_mouse_check_button(0,mb_left)) {
+	// Longer delay if the player is evidently using mouse to move.
+	alarm[7] = 3 * room_speed;
+}
+else {
+	alarm[7] = 1 * room_speed;
+}
+
 sprite_set_offset(sprite_index, 0,sprite_height);
 sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, sprite_height, bboxkind_rectangular,0);
 

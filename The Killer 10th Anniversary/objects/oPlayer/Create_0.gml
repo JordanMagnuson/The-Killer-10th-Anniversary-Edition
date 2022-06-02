@@ -4,9 +4,10 @@ animSpeed = 0;
 walking = false;
 canPush = true;
 
-// allowMove prevents the player from walking for 5 frames
-// added to fix bugs related to input spam
+// allowMove prevents the player from walking for 5 frames at game start.
+// Mostly for touch devices.
 allowMove = false;
+alarm[0] = 0.2 * room_speed;
 
 sprite_index = sprKillerWalk;
 

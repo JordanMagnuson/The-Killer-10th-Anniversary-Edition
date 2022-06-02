@@ -1,5 +1,9 @@
 X = keyboard_check(vk_space);
 
+// Also allow left-click / touch for move.
+if (!X && allowMove) 
+	X = device_mouse_check_button(0, mb_left);
+
 if(global.playSounds && walking && !audio_is_playing(sndWalking)){
 	audio_play_sound(sndWalking, 75, true);
 }
@@ -63,7 +67,7 @@ else{
 		audio_stop_sound(sndWalking);
 }
 
-if(keyboard_check_released(vk_space)){
+if(keyboard_check_released(vk_space) || device_mouse_check_button_released(0,mb_left)){
 	if(!global.reachedPlains){
 		if(!instance_exists(oTextNotFarEnough)){
 			instance_create_depth(0, 0, 0, oTextNotFarEnough);

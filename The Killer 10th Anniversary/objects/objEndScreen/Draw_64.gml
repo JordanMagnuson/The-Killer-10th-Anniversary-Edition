@@ -30,7 +30,7 @@ if (!spr_follow_link) {
 	yy = surface_height * 2/3;
 
 	var instructions = "Click ";
-	if (global.is_touch_device) {
+	if (global.is_touch_device == 1) {
 		instructions = "Touch ";
 	}	
 	//if (global.aspect_ratio < 1 || global.browser_width_hdpi < 900)	{
