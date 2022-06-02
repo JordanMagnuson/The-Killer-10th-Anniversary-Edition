@@ -1,20 +1,20 @@
 // Game settings.
-global.ALLOW_MUSIC_OPTION = true;				// Whether to give the player the choice to have music or ambient sounds in game.
+global.ALLOW_MUSIC_OPTION = false;				// Whether to give the player the choice to have music or ambient sounds in game.
 global.MUSIC_WHILE_WALKING = false;			// Default music or no music of choice is not given?
-global.GAME_OVER_ABOUT_CAMBODIA = true; // Show the original game over sequence with information about Cambodia, or just a "Thanks for playing" black screen?
+global.GAME_OVER_ABOUT_CAMBODIA = false; // Show the original game over sequence with information about Cambodia, or just a "Thanks for playing" black screen?
 
 // Global constants
 // Day-evening-night cycle = 95 seconds
 // If music starts from beginning, we want walk to take between 3:00 and 3:50
 global.WALKING_SPEED = 100;
 // Music fade in at beach times: 90, 60, 60
-global.MIN_TIME_IN_JUNGLE = 80; // 60	
-global.MIN_TIME_IN_FOREST = 50; // 45
-global.MIN_TIME_IN_BEACH = 50; 	// 45
+global.MIN_TIME_IN_JUNGLE = 60; // 60	
+global.MIN_TIME_IN_FOREST = 60; // 45
+global.MIN_TIME_IN_BEACH = 60; 	// 45
 // Music fade in at beach times: 120, 60, 120
-global.MAX_TIME_IN_JUNGLE = 100;	// 90
-global.MAX_TIME_IN_FOREST = 65;		// 90
-global.MAX_TIME_IN_BEACH = 65;		// 90
+global.MAX_TIME_IN_JUNGLE = 60;	// 90
+global.MAX_TIME_IN_FOREST = 60;		// 90
+global.MAX_TIME_IN_BEACH = 60;		// 90
 		
 global.timeInJungle = global.MIN_TIME_IN_JUNGLE + random(1) * (global.MAX_TIME_IN_JUNGLE - global.MIN_TIME_IN_JUNGLE);
 global.timeInForest = global.MIN_TIME_IN_FOREST + random(1) * (global.MAX_TIME_IN_FOREST - global.MIN_TIME_IN_FOREST);
