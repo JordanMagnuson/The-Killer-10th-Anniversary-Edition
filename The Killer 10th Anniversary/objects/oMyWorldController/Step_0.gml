@@ -31,7 +31,12 @@ if(keyboard_check_pressed(vk_f5) && !musicStarted){
 }
 
 if(keyboard_check_pressed(vk_f4)){
-	room_goto(rmGameOver);
+	if (global.GAME_OVER_ABOUT_CAMBODIA) {
+		room_goto(rmGameOverOriginal);
+	}
+	else {
+		room_goto(rmGameOver);
+	}
 }
 
 

@@ -4,7 +4,12 @@ y += 1100/(86*room_speed);
 
 if( y > 1175)
 {
-	room_goto_next();
+	if (global.GAME_OVER_ABOUT_CAMBODIA) {
+		room_goto(rmGameOverOriginal);
+	}
+	else {
+		room_goto(rmGameOver);
+	}
 }
 
 //Stop animation

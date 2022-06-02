@@ -57,5 +57,10 @@ function startFallingCamera()
 
 function gameOver()
 {
-	room_goto_next();
+	if (global.GAME_OVER_ABOUT_CAMBODIA) {
+		room_goto(rmGameOverOriginal);
+	}
+	else {
+		room_goto(rmGameOver);
+	}
 }

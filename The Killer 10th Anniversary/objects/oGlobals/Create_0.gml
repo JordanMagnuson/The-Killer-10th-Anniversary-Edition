@@ -1,5 +1,7 @@
-global.ALLOW_MUSIC_OPTION = true;	// Whether to give the player the choice to have music or ambient sounds in game.
-global.MUSIC_WHILE_WALKING = false; // Default music or no music of choice is not given?
+// Game settings.
+global.ALLOW_MUSIC_OPTION = true;				// Whether to give the player the choice to have music or ambient sounds in game.
+global.MUSIC_WHILE_WALKING = false;			// Default music or no music of choice is not given?
+global.GAME_OVER_ABOUT_CAMBODIA = true; // Show the original game over sequence with information about Cambodia, or just a "Thanks for playing" black screen?
 
 // Global constants
 // Day-evening-night cycle = 95 seconds

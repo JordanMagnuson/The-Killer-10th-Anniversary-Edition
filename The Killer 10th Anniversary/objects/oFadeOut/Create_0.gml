@@ -28,5 +28,10 @@ function startBuffer(){
 }
 
 function switchWorlds(){
-	room_goto(rmGameOver);
+	if (global.GAME_OVER_ABOUT_CAMBODIA) {
+		room_goto(rmGameOverOriginal);
+	}
+	else {
+		room_goto(rmGameOver);
+	}
 }
