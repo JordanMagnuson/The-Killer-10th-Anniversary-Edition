@@ -1,4 +1,3 @@
-
 if(inProcess){
 	currentGain00 -= 1/(FADE_DURATION)/room_speed;
 	audio_emitter_gain(soundEmitter00, currentGain00);
