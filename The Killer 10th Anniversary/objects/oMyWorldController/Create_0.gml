@@ -130,7 +130,7 @@ function fadeMusicIn(duration = 10){
 	global.playSounds = false;
 	global.fadeSounds = true;
 	audio_emitter_gain(musicEmit, 0);
-	audio_play_sound_on(musicEmit, music, true, 100);
+	audio_play_sound_on(musicEmit, music, false, 100);
 	self.duration = duration;
 }
 
