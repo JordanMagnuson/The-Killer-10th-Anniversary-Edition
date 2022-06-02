@@ -1,7 +1,7 @@
 if (USE_MULTIPLY_BLENDMODE) {
 	// Draw night overlay on its own surface. Required for multiply blendmode to work properly.
 	if(!variable_global_exists("night_overlay_surface") || !surface_exists(global.night_overlay_surface)) {
-		global.night_overlay_surface = surface_create(room_width, room_height);
+		global.night_overlay_surface = surface_create(room_width, room_height + 10); // +10 here is to give a little buffer to prevent artifacts on certain resolutions.
 	}	
 	
 	surface_set_target(global.night_overlay_surface);
@@ -12,7 +12,7 @@ if (USE_MULTIPLY_BLENDMODE) {
 
 	// Draw the surface using multiply blendmode.
 	gpu_set_blendmode_ext(bm_zero, bm_src_color);	// Multiply blendmode.
-	draw_surface(global.night_overlay_surface, 0, y);
+	draw_surface(global.night_overlay_surface, 0, y - 5);
 	gpu_set_blendmode(bm_normal);
 }
 else {
