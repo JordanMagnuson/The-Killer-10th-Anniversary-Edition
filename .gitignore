@@ -1,7 +1,10 @@
+# Ignore working directories.
 /working/
-/bin/
-/screens/
-/IndieCade 2011 Submission/
+/*/working/
+
+# Ignore build directory.
+/build/
+/*/build/
 
 # Ignore Windows image file caches.
 Thumbs.db
