@@ -38,9 +38,9 @@ draw_text_transformed(xx, yy, title, h1_size * global.gui_scale, h1_size * globa
 //draw_set_font(fntVerdana);
 yy += string_h + vs;
 if (global.browser_width_hdpi < 600)
-	var byline = "A Notgame by Jordan Magnuson\nwith music by Jonsi";
+	var byline = "A Notgame by Jordan Magnuson";
 else
-	var byline = "A Notgame by Jordan Magnuson, with music by Jonsi";
+	var byline = "A Notgame by Jordan Magnuson";
 draw_text_transformed(xx, yy, byline, h3_size * global.gui_scale, h3_size * global.gui_scale, 0);
 
 // By line 2
@@ -50,11 +50,11 @@ draw_text_transformed(xx, yy, byline2, h3_size * global.gui_scale, h3_size * glo
 
 // Instructions
 yy += 32*global.gui_scale;
-draw_set_color(c_yellow);
+draw_set_color(c_white);
 if (global.browser_width_hdpi < 600)
-	var instructions = ""
+	var instructions = "Featuring Music by Jonsi"
 else
-	var instructions = ""
+	var instructions = "Featuring Music by Jonsi"
 draw_text_transformed(xx, yy, instructions, h3_size * global.gui_scale, h3_size * global.gui_scale, 0);
 draw_set_color(c_white);
 
